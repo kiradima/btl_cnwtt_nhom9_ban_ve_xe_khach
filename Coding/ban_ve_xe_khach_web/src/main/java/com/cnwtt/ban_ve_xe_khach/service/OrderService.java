@@ -1,7 +1,7 @@
 package com.cnwtt.ban_ve_xe_khach.service;
 
-import com.cnwtt.ban_ve_xe_khach.entity.ChuyenXe;
-import com.cnwtt.ban_ve_xe_khach.repository.ChuyenXeRepository;
+import com.cnwtt.ban_ve_xe_khach.entity.Order;
+import com.cnwtt.ban_ve_xe_khach.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -10,16 +10,16 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ChuyenXeService {
+public class OrderService {
 
     @Autowired
-    private ChuyenXeRepository repository;
+    private OrderRepository repository;
 
-    public Page<ChuyenXe> getLists(Pageable pageable) {
+    public Page<Order> getLists(Pageable pageable) {
         return repository.findAll(pageable);
     }
 
-    public List<ChuyenXe> findAllChuyenXe() {
+    public List<Order> findAllOrder() {
         return repository.findAll();
     }
 
@@ -29,7 +29,7 @@ public class ChuyenXeService {
      * @param entity
      * @return
      */
-    public ChuyenXe create(ChuyenXe entity) {
+    public Order create(Order entity) {
         return repository.save(entity);
     }
 
@@ -40,7 +40,7 @@ public class ChuyenXeService {
      * @return
      */
 
-    public ChuyenXe findById(Integer id) {
+    public Order findById(Integer id) {
         return repository.findById(id).get();
     }
 
@@ -51,7 +51,7 @@ public class ChuyenXeService {
      * @return
      */
 
-    public ChuyenXe update(ChuyenXe entity){
+    public Order update(Order entity){
         return repository.save(entity);
     }
 
@@ -63,7 +63,7 @@ public class ChuyenXeService {
      */
 
     public void delete(Integer id){
-        ChuyenXe entity = findById(id);
+        Order entity = findById(id);
         repository.delete(entity);
     }
 

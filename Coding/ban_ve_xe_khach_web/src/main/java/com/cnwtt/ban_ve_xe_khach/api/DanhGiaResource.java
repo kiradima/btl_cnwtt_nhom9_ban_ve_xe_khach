@@ -1,7 +1,7 @@
 package com.cnwtt.ban_ve_xe_khach.api;
 
-import com.cnwtt.ban_ve_xe_khach.entity.ChuyenXe;
-import com.cnwtt.ban_ve_xe_khach.service.ChuyenXeService;
+import com.cnwtt.ban_ve_xe_khach.entity.DanhGia;
+import com.cnwtt.ban_ve_xe_khach.service.DanhGiaService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,43 +12,43 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1/chuyenxe")
-public class ChuyenXeResource {
+@RequestMapping("/api/v1/danhgia")
+public class DanhGiaResource {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(ChuyenXeResource.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(DanhGiaResource.class);
 
     @Autowired
-    private ChuyenXeService service;
+    private DanhGiaService service;
 
     @PostMapping("/create")
-    public ResponseEntity<ChuyenXe> save(@RequestBody ChuyenXe entity) {
-        LOGGER.info("Call api create chuyenxe");
+    public ResponseEntity<DanhGia> save(@RequestBody DanhGia entity) {
+        LOGGER.info("Call api create danhgia");
         return ResponseEntity.ok(service.create(entity));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ChuyenXe> get(@PathVariable("id") Integer id) {
-        LOGGER.info("Call api get chuyenxe: id[{}]", id);
+    public ResponseEntity<DanhGia> get(@PathVariable("id") Integer id) {
+        LOGGER.info("Call api get danhgia: id[{}]", id);
         return ResponseEntity.ok(service.findById(id));
     }
 
     @PutMapping("/update")
-    public ResponseEntity<ChuyenXe> update(@RequestBody ChuyenXe entity) {
-        LOGGER.info("Call api update chuyenxe");
+    public ResponseEntity<DanhGia> update(@RequestBody DanhGia entity) {
+        LOGGER.info("Call api update danhgia");
         return ResponseEntity.ok(service.update(entity));
     }
 
     @DeleteMapping("/delete/{id}")
     public void delete(@PathVariable("id") Integer id) {
-        LOGGER.info("Call api delete chuyenxe : id [{}]", id);
+        LOGGER.info("Call api delete danhgia : id [{}]", id);
         service.delete(id);
     }
 
     @GetMapping("/list")
-    public Page<ChuyenXe> list(@RequestParam(value = "page", defaultValue = "1") int page,
+    public Page<DanhGia> list(@RequestParam(value = "page", defaultValue = "1") int page,
                                @RequestParam(value = "size", defaultValue = "20") int size,
                                @RequestParam(value = "sort_by", defaultValue = "id") String sortField) {
-        LOGGER.info("Call api list chuyenxe");
+        LOGGER.info("Call api list danhgia");
         return service.getLists(PageRequest.of(page - 1, size, Sort.by(sortField)));
     }
 

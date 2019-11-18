@@ -5,7 +5,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "chuyenxe")
-public class ChuyenXeEntity {
+public class ChuyenXe {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +16,7 @@ public class ChuyenXeEntity {
     private String luuY;
     private Integer idNhaXe;
 
-    public ChuyenXeEntity(String loaiXe, String chinhSachHuyVe, String luuY, Integer idNhaXe) {
+    public ChuyenXe(String loaiXe, String chinhSachHuyVe, String luuY, Integer idNhaXe) {
         this.loaiXe = loaiXe;
         this.chinhSachHuyVe = chinhSachHuyVe;
         this.luuY = luuY;

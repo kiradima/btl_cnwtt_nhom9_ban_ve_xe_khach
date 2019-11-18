@@ -1,7 +1,7 @@
 package com.cnwtt.ban_ve_xe_khach.service;
 
-import com.cnwtt.ban_ve_xe_khach.entity.ChuyenXe;
-import com.cnwtt.ban_ve_xe_khach.repository.ChuyenXeRepository;
+import com.cnwtt.ban_ve_xe_khach.entity.NhaXe;
+import com.cnwtt.ban_ve_xe_khach.repository.NhaXeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -10,16 +10,16 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ChuyenXeService {
+public class NhaXeService {
 
     @Autowired
-    private ChuyenXeRepository repository;
+    private NhaXeRepository repository;
 
-    public Page<ChuyenXe> getLists(Pageable pageable) {
+    public Page<NhaXe> getLists(Pageable pageable) {
         return repository.findAll(pageable);
     }
 
-    public List<ChuyenXe> findAllChuyenXe() {
+    public List<NhaXe> findAllNhaXe() {
         return repository.findAll();
     }
 
@@ -29,7 +29,7 @@ public class ChuyenXeService {
      * @param entity
      * @return
      */
-    public ChuyenXe create(ChuyenXe entity) {
+    public NhaXe create(NhaXe entity) {
         return repository.save(entity);
     }
 
@@ -40,7 +40,7 @@ public class ChuyenXeService {
      * @return
      */
 
-    public ChuyenXe findById(Integer id) {
+    public NhaXe findById(Integer id) {
         return repository.findById(id).get();
     }
 
@@ -51,7 +51,7 @@ public class ChuyenXeService {
      * @return
      */
 
-    public ChuyenXe update(ChuyenXe entity){
+    public NhaXe update(NhaXe entity){
         return repository.save(entity);
     }
 
@@ -63,7 +63,7 @@ public class ChuyenXeService {
      */
 
     public void delete(Integer id){
-        ChuyenXe entity = findById(id);
+        NhaXe entity = findById(id);
         repository.delete(entity);
     }
 
