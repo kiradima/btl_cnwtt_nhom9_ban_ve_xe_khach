@@ -1,22 +1,33 @@
 package com.cnwtt.ban_ve_xe_khach.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "orderdetail")
-public class OrderDetail {
-    private Integer idOder;
+public class OrderDetail implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private Integer idOrder;
     private Integer idVe;
     private Integer idDiemDon;
     private Integer idDiemDung;
 
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
     public Integer getIdOder() {
-        return idOder;
+        return idOrder;
     }
 
     public void setIdOder(Integer idOder) {
-        this.idOder = idOder;
+        this.idOrder = idOder;
     }
 
     public Integer getIdVe() {

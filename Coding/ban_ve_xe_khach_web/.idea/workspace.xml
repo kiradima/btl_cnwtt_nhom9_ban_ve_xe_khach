@@ -2,17 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27f1d8bc-577f-4191-9b8e-2d5e559e9b1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/admin/example.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/admin/vexe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/template/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/api/ChuyenXeResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/api/ChuyenXeResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/entity/ChuyenXeEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/entity/OrderDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/entity/OrderDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/repository/ChuyenXeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/repository/ChuyenXeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/service/ChuyenXeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/service/ChuyenXeService.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -39,6 +46,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -48,6 +58,7 @@
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
         <option name="jdkForImporter" value="1.8" />
       </MavenImportingSettings>
     </option>
@@ -113,6 +124,9 @@
       <workItem from="1574062889535" duration="3830000" />
       <workItem from="1574081529442" duration="1670000" />
       <workItem from="1574132593838" duration="4014000" />
+      <workItem from="1574593741396" duration="1675000" />
+      <workItem from="1574644669663" duration="60000" />
+      <workItem from="1574735271483" duration="3761000" />
     </task>
     <servers />
   </component>
