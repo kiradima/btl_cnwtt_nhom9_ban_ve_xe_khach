@@ -6,7 +6,8 @@
 
     <link rel="stylesheet" href="/custom/css/login.css" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="/libs/bootstrap/bootstrap.4.1.0.min.css">
-    <link rel="stylesheet" href="/custom/css/layouts/common_component.css">
+    <link rel="stylesheet" href="/custom/css/common_component.css">
+
 
     <script src="/libs/jquery/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="/libs/bootstrap/bootstrap.4.1.0.min.js"></script>
@@ -15,7 +16,7 @@
     <script type="text/javascript" src="/custom/js/login.js"></script>
 </head>
 <body>
-<div th:replace="layouts/common_components :: alert"></div>
+<!--<div th:replace="layouts/common_components :: alert"></div>-->
 <div class="container" style="">
     <div class="container-login">
         <div class="sub-container">
@@ -23,7 +24,8 @@
             <div class="form-signin">
                 <input type="username" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
                 <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" id="confirm_login">Sign in</button>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" id="confirm_login">
+                    Sign in</button>
             </div><!-- /form -->
             <a href="#" class="forgot-password">forgot-password</a>
         </div>
