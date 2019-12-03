@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27f1d8bc-577f-4191-9b8e-2d5e559e9b1c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/enums/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/custom/css/common_component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/custom/css/login.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/admin/ViTriChuyenXe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/layouts/common_component.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/custom/js/admin/chuyenxe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/admin/ChuyenXe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/custom/js/admin/danhgia.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/admin/DanhGia.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/custom/js/admin/datve.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/admin/OrderDetail.js" afterDir="false" />
@@ -12,6 +24,13 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/custom/js/admin/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/admin/User.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/custom/js/admin/vexe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/admin/VeXe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/custom/js/admin/vitri.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/admin/Vitri.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/template/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/api/ChuyenXeResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/api/ChuyenXeResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/entity/ChuyenXeEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/entity/OrderDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/entity/OrderDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/repository/ChuyenXeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/repository/ChuyenXeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/service/ChuyenXeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/service/ChuyenXeService.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +58,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Class" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -76,7 +97,8 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/Rabiloo/internal_management_system" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.26242545" />
@@ -127,7 +149,8 @@
       <workItem from="1574132593838" duration="4014000" />
       <workItem from="1574593741396" duration="1675000" />
       <workItem from="1574644669663" duration="60000" />
-      <workItem from="1574735271483" duration="3761000" />
+      <workItem from="1574735271483" duration="12254000" />
+      <workItem from="1575299738280" duration="4723000" />
     </task>
     <servers />
   </component>
