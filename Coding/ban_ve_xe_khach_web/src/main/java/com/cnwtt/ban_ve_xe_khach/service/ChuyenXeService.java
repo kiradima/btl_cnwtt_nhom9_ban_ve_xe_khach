@@ -19,7 +19,7 @@ public class ChuyenXeService {
         return repository.findAll(pageable);
     }
 
-    public List<ChuyenXe> findAllChuyenXe() {
+    public List<ChuyenXe> findAll() {
         return repository.findAll();
     }
 
@@ -40,7 +40,7 @@ public class ChuyenXeService {
      * @return
      */
 
-    public ChuyenXe findById(Integer id) {
+    public ChuyenXe findById(Long id) {
         return repository.findById(id).get();
     }
 
@@ -62,7 +62,7 @@ public class ChuyenXeService {
      * @return
      */
 
-    public void delete(Integer id){
+    public void delete(Long id){
         ChuyenXe entity = findById(id);
         repository.delete(entity);
     }

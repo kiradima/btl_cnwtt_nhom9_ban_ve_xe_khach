@@ -1,5 +1,6 @@
 package com.cnwtt.ban_ve_xe_khach.api;
 
+
 import com.cnwtt.ban_ve_xe_khach.entity.ViTri;
 import com.cnwtt.ban_ve_xe_khach.service.ViTriService;
 import org.slf4j.Logger;
@@ -27,7 +28,7 @@ public class ViTriResource {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ViTri> get(@PathVariable("id") Integer id) {
+    public ResponseEntity<ViTri> get(@PathVariable("id") Long id) {
         LOGGER.info("Call api get vitri: id[{}]", id);
         return ResponseEntity.ok(service.findById(id));
     }
@@ -39,7 +40,7 @@ public class ViTriResource {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable("id") Integer id) {
+    public void delete(@PathVariable("id") Long id) {
         LOGGER.info("Call api delete vitri : id [{}]", id);
         service.delete(id);
     }

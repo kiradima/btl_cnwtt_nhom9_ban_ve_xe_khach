@@ -1,33 +1,30 @@
 package com.cnwtt.ban_ve_xe_khach.entity;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
-@Table(name = "chuyenxe")
+@Table(name = "chuyen_xe")
 public class ChuyenXe {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
+    @Column(name="loai_xe")
     private String loaiXe;
+    @Column(name="chinh_sach_huy_ve")
     private String chinhSachHuyVe;
+    @Column(name="luu_y")
     private String luuY;
+    @Column(name="id_nha_xe")
     private Integer idNhaXe;
 
-    public ChuyenXe(String loaiXe, String chinhSachHuyVe, String luuY, Integer idNhaXe) {
-        this.loaiXe = loaiXe;
-        this.chinhSachHuyVe = chinhSachHuyVe;
-        this.luuY = luuY;
-        this.idNhaXe = idNhaXe;
-    }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

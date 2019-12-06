@@ -3,12 +3,12 @@ package com.cnwtt.ban_ve_xe_khach.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "danhgia")
+@Table(name = "danh_gia")
 public class DanhGia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     private String noiDung;
     private Integer idUser;
@@ -22,11 +22,11 @@ public class DanhGia {
         this.sao = sao;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

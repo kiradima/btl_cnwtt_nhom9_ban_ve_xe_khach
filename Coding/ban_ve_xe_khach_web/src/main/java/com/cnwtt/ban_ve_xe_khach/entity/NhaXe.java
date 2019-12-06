@@ -1,10 +1,9 @@
 package com.cnwtt.ban_ve_xe_khach.entity;
 
 import javax.persistence.*;
-import javax.persistence.criteria.CriteriaBuilder;
 
 @Entity
-@Table(name="nhaxe")
+@Table(name="nha_xe")
 public class NhaXe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
