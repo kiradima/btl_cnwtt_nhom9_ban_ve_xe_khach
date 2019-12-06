@@ -1,11 +1,9 @@
 package com.cnwtt.ban_ve_xe_khach.entity;
 
-import org.hibernate.annotations.GeneratorType;
-
 import javax.persistence.*;
 
 @Entity
-@Table(name="vexe")
+@Table(name="ve_xe")
 public class VeXe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

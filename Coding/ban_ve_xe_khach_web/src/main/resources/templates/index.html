@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <h1>HELLOO</h1>
+<!--    <h1 th:each="entity:${listLocation}" th:value="${entity.id}" th:text="${entity.location}"></h1>-->
+    <h1 th:each="entity:${listChuyenXe}" th:value="${entity.id}" th:text="${entity.loaiXe}"></h1>
+
+
 </head>
 <body>
 

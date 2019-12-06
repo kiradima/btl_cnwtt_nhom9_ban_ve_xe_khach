@@ -1,5 +1,6 @@
 package com.cnwtt.ban_ve_xe_khach.service;
 
+
 import com.cnwtt.ban_ve_xe_khach.entity.DanhGia;
 import com.cnwtt.ban_ve_xe_khach.repository.DanhGiaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +41,7 @@ public class DanhGiaService {
      * @return
      */
 
-    public DanhGia findById(Integer id) {
+    public DanhGia findById(Long id) {
         return repository.findById(id).get();
     }
 
@@ -62,7 +63,7 @@ public class DanhGiaService {
      * @return
      */
 
-    public void delete(Integer id){
+    public void delete(Long id){
         DanhGia entity = findById(id);
         repository.delete(entity);
     }

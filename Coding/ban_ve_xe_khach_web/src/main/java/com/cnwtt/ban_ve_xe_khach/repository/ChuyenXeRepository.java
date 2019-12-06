@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ChuyenXeRepository extends JpaRepository<ChuyenXe, Integer> {
-    Page<ChuyenXe> findAll (Pageable pageable);
+public interface ChuyenXeRepository extends JpaRepository<ChuyenXe, Long> {
+    Page<ChuyenXe> findAll(Pageable pageable);
 
 }
