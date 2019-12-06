@@ -1,0 +1,121 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thanhtoan</title>
+    <!-- <script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="Style/lichsustyle.css">
+    <link rel="stylesheet" href="Style/font-awesome/all.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navbar">
+            <div class="navbar-tag">
+                <button class="dropbtn">Cá nhân</button>
+                <div class="dropbtn-content">
+                    <div class="person-info">
+                        <a href="">Xem lịch sử đơn hàng</a>
+                        <br>
+                        <a href="">Chỉnh sửa thông tin cá nhân</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-tag">
+                <button class="dropbtn">Trang chủ</button>
+            </div>
+            <div class="navbar-tag">
+                <button class="dropbtn">Đăng ký</button>
+            </div>
+            <div class="navbar-tag">
+                <button class="dropbtn">Đăng nhập</button>
+            </div>
+        </div>
+
+        <div class="form-search">
+            <div class="form-search-content">
+                <label for="">Điểm xuất phát</label>
+                <select class="inputstyle" name="" id="">
+                    <option value="">Hà Nội</option>
+                    <option value="">Hải Phòng</option>
+                </select>
+            </div>
+            <div class="form-search-content">
+                <label for="">Điểm đích</label>
+                <select class="inputstyle" name="" id="">
+                    <option value="">Hà Nội</option>
+                    <option value="">Hải Phòng</option>
+                </select>
+            </div>
+            <div class="form-search-content">
+                <label for="">Ngày xuất phát</label>
+                <input class="inputstyle" type="date" name="" id="input" value="" required="required" title="">
+            </div>
+            <div class="form-search-content">
+
+                <button type="button" class="form-search-btn">Tìm kiếm</button>
+
+            </div>
+        </div>
+
+        <div class="main-content">
+            <table class="blueTable">
+                <thead>
+                    <tr>
+                        <th>Nhà xe</th>
+                        <th>Điểm đón</th>
+                        <th>Điểm trả khách</th>
+                        <th>Ngày xuất phát</th>
+                        <th>Giá vé</th>
+                        <th>Đánh giá</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="7">
+                            <div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a
+                                    href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>cell1_1</td>
+                        <td>cell2_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                        <td>cell5_1</td>
+                        <td>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+    </div>
+
+    </div>
+
+
+    <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+    <script src="JS/jquery.min.js"></script>
+    <script src="JS/fontawesome/all.js"></script>
+
+
+</body>
+
+</html>
