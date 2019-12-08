@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fa2fce9-2377-4b0b-8097-fd7961f0e6c4" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/NhaXeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/NhaXeResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/OrderDetailResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/OrderDetailResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/OrderResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/OrderResource.java" afterDir="false" />
@@ -9,6 +10,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/VeXeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/VeXeResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/ViTriChuyenXeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/ViTriChuyenXeResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/LocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/MainController.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> fix db
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/ChuyenXe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/ChuyenXe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/DanhGia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/DanhGia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/NhaXe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/NhaXe.java" afterDir="false" />
@@ -18,6 +22,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/VeXe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/VeXe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/ViTri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/ViTri.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/ViTriChuyenXe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/ViTriChuyenXe.java" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/repository/NhaXeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/repository/NhaXeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/repository/OrderDetailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/repository/OrderDetailRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/repository/OrderRepository.java" afterDir="false" />
@@ -31,6 +36,11 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/service/VeXeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/service/VeXeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/service/ViTriChuyenXeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/service/ViTriChuyenXeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/entity/ViTri.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/entity/ViTri.class" afterDir="false" />
+>>>>>>> fix db
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,25 +65,25 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="dat_ve_xe_khach@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="qlxk" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="dat_ve_xe_khach@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="qlxk" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="dat_ve_xe_khach@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="dat_ve_xe_khach: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="dat_ve_xe_khach@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="qlxk" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="dat_ve_xe_khach: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="chuyen_xe: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="qlxk" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dat_ve_xe_khach: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="vi_tri: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -108,11 +118,20 @@
   <component name="JRebelWorkspace">
     <option name="jrebelEnabledAutocompile" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
+=======
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+>>>>>>> fix db
   </component>
   <component name="ProjectId" id="1Ub9p85nVeqEPXUGdRU1gaxQSdX" />
   <component name="ProjectLevelVcsManager">
@@ -132,7 +151,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.69770116" />
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+=======
+    <property name="restartRequiresConfirmation" value="false" />
+>>>>>>> fix db
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -175,10 +198,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575614607669</updated>
+<<<<<<< HEAD
       <workItem from="1575614611946" duration="28152000" />
       <workItem from="1575810648850" duration="710000" />
       <workItem from="1575853792269" duration="341000" />
       <workItem from="1575898359408" duration="4008000" />
+=======
+      <workItem from="1575614611946" duration="4797000" />
+      <workItem from="1575801605720" duration="1177000" />
+      <workItem from="1575802817117" duration="12000" />
+>>>>>>> fix db
     </task>
     <servers />
   </component>

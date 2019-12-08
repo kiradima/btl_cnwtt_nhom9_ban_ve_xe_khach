@@ -13,12 +13,19 @@ public class ViTriChuyenXe {
     private Long id;
     @Column(name = "id_vi_tri")
     private Integer idViTri;
-    @Column(name="id_chuyen_xe")
+    @Column(name = "id_chuyen_xe")
     private Long idChuyenXe;
     @Column(name = "thoi_diem_du_kien")
     private Date thoiDiemDuKien;
     @Column(name = "type")
     private Long type;
+
+    public ViTriChuyenXe(Integer idViTri, Long idChuyenXe, Date thoiDiemDuKien, Long type) {
+        this.idViTri = idViTri;
+        this.idChuyenXe = idChuyenXe;
+        this.thoiDiemDuKien = thoiDiemDuKien;
+        this.type = type;
+    }
 
     public Long getId() {
         return id;
