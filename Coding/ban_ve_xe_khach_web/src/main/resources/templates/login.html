@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/custom/css/login.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="/libs/bootstrap/bootstrap.4.1.0.min.css">
+    <link rel="stylesheet" href="/custom/css/common_component.css">
+    <script src="/libs/jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/libs/bootstrap/bootstrap.4.1.0.min.js"></script>
+    <script type="text/javascript" src="/custom/js/layouts/common_component.js"></script>
+    <script type="text/javascript" src="/custom/js/login.js"></script>
+</head>
+<body>
+<!--<div th:replace="layouts/common_components :: alert"></div>-->
+<div class="container" style="">
+    <div class="container-login">
+        <div class="sub-container">
+            <p id="profile-name" class="profile-name-card hidden"></p>
+            <form class="form-signin" action="/api/v1/user/login" modelAttribute="login">
+                <input type="username" id="username" name="username" class="form-control" placeholder="Username"
+                       required autofocus>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+                       required>
+                <input class="btn btn-lg btn-primary btn-block btn-signin" id="confirm_login" type="submit">Sign
+                in</input>
+            </form><!-- /form -->
+            <a href="#" class="forgot-password">forgot-password</a>
+        </div>
+    </div>
+</div><!-- /container -->
+
+
+</body>
+</html>

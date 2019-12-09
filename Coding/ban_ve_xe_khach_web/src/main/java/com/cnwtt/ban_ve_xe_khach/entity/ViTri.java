@@ -9,9 +9,10 @@ public class ViTri {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column(name = "vi_tri")
     private String viTri;
+    @Column(name = "tinh")
+    private String tinh;
 
     public Long getId() {
         return id;
@@ -27,5 +28,13 @@ public class ViTri {
 
     public void setViTri(String viTri) {
         this.viTri = viTri;
+    }
+
+    public String getTinh() {
+        return tinh;
+    }
+
+    public void setTinh(String tinh) {
+        this.tinh = tinh;
     }
 }

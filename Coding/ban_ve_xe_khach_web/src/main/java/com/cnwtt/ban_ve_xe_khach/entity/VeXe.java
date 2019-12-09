@@ -15,6 +15,12 @@ public class VeXe {
     @Column(name = "id_chuyen_xe")
     private Long idChuyenXe;
 
+    public VeXe(Float mucGia, Long viTriGhe, Long idChuyenXe) {
+        this.mucGia = mucGia;
+        this.viTriGhe = viTriGhe;
+        this.idChuyenXe = idChuyenXe;
+    }
+
     public Long getId() {
         return id;
     }

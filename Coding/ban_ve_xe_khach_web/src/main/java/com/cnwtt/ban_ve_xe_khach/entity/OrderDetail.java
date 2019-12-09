@@ -16,6 +16,7 @@ public class OrderDetail implements Serializable {
     @Column(name = "id_diem_don")
     private Integer idDiemDon;
     @Column(name = "id_diem_dung")
+
     private Integer idDiemDung;
 
     public Integer getId() {

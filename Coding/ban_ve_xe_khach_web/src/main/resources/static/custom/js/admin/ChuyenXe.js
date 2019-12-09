@@ -31,7 +31,11 @@ $(document).ready(function () {
             "page": (requestData.start / requestData.length) + 1,
             "size": requestData.length,
         };
+<<<<<<< HEAD
         jQuery.get("/api/v1/chuyenxe/list", params, function (response) {
+=======
+        jQuery.get("/api/v1/ChuyenXe/list", params, function (response) {
+>>>>>>> login
             let content = {
                 "draw": requestData.draw,
                 "recordsTotal": response.totalElements,
@@ -42,10 +46,17 @@ $(document).ready(function () {
         });
     };
 
+<<<<<<< HEAD
     let table = $("#table").dataTable({
         "lengthMenu": [
             [5, 10, 20],
             [5, 10, 20]
+=======
+    let table = $("#table").DataTable({
+        "lengthMenu": [
+            [10, 20, 50],
+            [10, 20, 50]
+>>>>>>> login
         ],
         "serverSide": true,
         "searching": false,
@@ -53,6 +64,7 @@ $(document).ready(function () {
         "ajax": function (requestData, renderFunction) {
             getData(requestData, renderFunction);
         },
+<<<<<<< HEAD
         // columnDefs: [{
         //     "render": function (data) {
         //         return '<button id="' + data.id + '" class="btn btn-info btn-sm btn-edit action-btn" data-toggle="modal" data-target="#edit_modal">Edit</button>' +
@@ -69,11 +81,30 @@ $(document).ready(function () {
         //         "visible": false
         //     }
         // ],
+=======
+        columnDefs: [{
+            "render": function (data) {
+                return '<button id="' + data.id + '" class="btn btn-info btn-sm btn-edit action-btn" data-toggle="modal" data-target="#edit_modal">Edit</button>' +
+                    '<button id="' + data.id + '" class="btn btn-danger btn-sm btn-delete" data-toggle="tooltip" data-target="#delete_modal" data-placement="bottom">Delete</button>';
+            },
+            targets: 5
+        },
+            {
+                "targets": [3],
+                "visible": false
+            },
+            {
+                "targets": [4],
+                "visible": false
+            }
+        ],
+>>>>>>> login
         "order": [
             [0, "asc"]
         ]
     });
 
+<<<<<<< HEAD
     // let nhaXe = {
     //     "id": $('#id_nha_xe').val(),
     //     "ten": $('#ten').val(),
@@ -90,6 +121,8 @@ $(document).ready(function () {
     //     };
     //     renderFunction(content);
     // });
+=======
+>>>>>>> login
     // CREATE NEW
 
     $(document).on("click", "#id-btn-add", function (e) {

@@ -52,7 +52,7 @@ public class UserService {
      * @return
      */
 
-    public User update(User entity){
+    public User update(User entity) {
         return repository.save(entity);
     }
 
@@ -68,4 +68,13 @@ public class UserService {
         repository.delete(entity);
     }
 
+    public User login(String username, String password) {
+        List<User> users = findAllUser();
+        for (User user : users) {
+            if (user.getUserName().equals(username) && user.getPassword().equals(password)) {
+                return user;
+            }
+        }
+        return null;
+    }
 }
