@@ -11,6 +11,4 @@ $(document).ready(function () {
         todayHighlight: true,
         autoclose: true
     })
-
-
 })

@@ -9,7 +9,6 @@ public class ViTri {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column(name = "vi_tri")
     private String viTri;
     @Column(name = "tinh")

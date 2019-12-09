@@ -5,21 +5,21 @@ $(document).ready(function () {
         }
     });
 
-    $("#confirm_login").on('click',function(){
+    $("#confirm_login").on('click', function () {
         var username = $("#username").val();
         var password = $("#password").val();
 
-        if(username === null || username === "" || username.trim() === ""){
-            window.component.alert.show("error","Please input email",2000);
+        if (username === null || username === "" || username.trim() === "") {
+            window.component.alert.show("error", "Please input email", 2000);
             return;
         }
 
-        if(password === null || password === "" || password.trim() === ""){
-            window.component.alert.show("error","Please input password",2000);
+        if (password === null || password === "" || password.trim() === "") {
+            window.component.alert.show("error", "Please input password", 2000);
             return;
         }
 
-        $("#confirm_login").prop("disabled",true);
+        $("#confirm_login").prop("disabled", true);
 
         var data = {
             username: username,
@@ -28,7 +28,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'POST',
-            url: "/login",
+            url: "/api/v1/user/login",
             data: data,
             success: function (response) {
                 console.log(response);
