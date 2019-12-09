@@ -41,7 +41,7 @@ public class UserService {
      * @return
      */
 
-    public User findById(Integer id) {
+    public User findById(Long id) {
         return repository.findById(id).get();
     }
 
@@ -63,7 +63,7 @@ public class UserService {
      * @return
      */
 
-    public void delete(Integer id){
+    public void delete(Long id){
         User entity = findById(id);
         repository.delete(entity);
     }

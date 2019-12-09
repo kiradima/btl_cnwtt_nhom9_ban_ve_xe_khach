@@ -7,27 +7,23 @@ import javax.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    private Integer id;
+    private Long id;
+    @Column(name = "username")
     private String userName;
+    @Column(name = "password")
     private String password;
-    private Integer role;
+    @Column(name = "role")
+    private Long role;
+    @Column(name = "real_name")
     private String realName;
+    @Column(name = "phone")
     private String phone;
 
-    public User(String userName, String password, Integer role, String realName, String phone) {
-        this.userName = userName;
-        this.password = password;
-        this.role = role;
-        this.realName = realName;
-        this.phone = phone;
-    }
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -47,11 +43,11 @@ public class User {
         this.password = password;
     }
 
-    public Integer getRole() {
+    public Long getRole() {
         return role;
     }
 
-    public void setRole(Integer role) {
+    public void setRole(Long role) {
         this.role = role;
     }
 

@@ -9,18 +9,14 @@ public class DanhGia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column(name = "noi_dung")
     private String noiDung;
+    @Column(name = "id_user")
     private Integer idUser;
+    @Column(name = "id_chuyen_xe")
     private Integer idChuyenXe;
+    @Column(name = "sao")
     private Integer sao;
-
-    public DanhGia(String noiDung, Integer idUser, Integer idChuyenXe, Integer sao) {
-        this.noiDung = noiDung;
-        this.idUser = idUser;
-        this.idChuyenXe = idChuyenXe;
-        this.sao = sao;
-    }
 
     public Long getId() {
         return id;

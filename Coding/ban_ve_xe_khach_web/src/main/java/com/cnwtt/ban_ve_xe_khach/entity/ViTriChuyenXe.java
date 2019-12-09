@@ -1,5 +1,7 @@
 package com.cnwtt.ban_ve_xe_khach.entity;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -8,25 +10,21 @@ import java.util.Date;
 public class ViTriChuyenXe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
+    private Long id;
+    @Column(name = "id_vi_tri")
     private Integer idViTri;
-    private Integer idChuyenXe;
+    @Column(name="id_chuyen_xe")
+    private Long idChuyenXe;
+    @Column(name = "thoi_diem_du_kien")
     private Date thoiDiemDuKien;
-    private Integer type;
+    @Column(name = "type")
+    private Long type;
 
-    public ViTriChuyenXe(Integer idViTri, Integer idChuyenXe, Date thoiDiemDuKien, Integer type) {
-        this.idViTri = idViTri;
-        this.idChuyenXe = idChuyenXe;
-        this.thoiDiemDuKien = thoiDiemDuKien;
-        this.type = type;
-    }
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -38,11 +36,11 @@ public class ViTriChuyenXe {
         this.idViTri = idViTri;
     }
 
-    public Integer getIdChuyenXe() {
+    public Long getIdChuyenXe() {
         return idChuyenXe;
     }
 
-    public void setIdChuyenXe(Integer idChuyenXe) {
+    public void setIdChuyenXe(Long idChuyenXe) {
         this.idChuyenXe = idChuyenXe;
     }
 
@@ -54,11 +52,11 @@ public class ViTriChuyenXe {
         this.thoiDiemDuKien = thoiDiemDuKien;
     }
 
-    public Integer getType() {
+    public Long getType() {
         return type;
     }
 
-    public void setType(Integer type) {
+    public void setType(Long type) {
         this.type = type;
     }
 }

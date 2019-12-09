@@ -27,7 +27,7 @@ public class UserResource {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> get(@PathVariable("id") Integer id) {
+    public ResponseEntity<User> get(@PathVariable("id") Long id) {
         LOGGER.info("Call api get user: id[{}]", id);
         return ResponseEntity.ok(service.findById(id));
     }
@@ -39,7 +39,7 @@ public class UserResource {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable("id") Integer id) {
+    public void delete(@PathVariable("id") Long id) {
         LOGGER.info("Call api delete user : id [{}]", id);
         service.delete(id);
     }

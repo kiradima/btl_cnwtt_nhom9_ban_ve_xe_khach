@@ -28,7 +28,7 @@ public class OrderDetailResource {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<OrderDetail> get(@PathVariable("id") Integer id) {
+    public ResponseEntity<OrderDetail> get(@PathVariable("id") Long id) {
         LOGGER.info("Call api get ordertail: id[{}]", id);
         return ResponseEntity.ok(service.findById(id));
     }
@@ -40,7 +40,7 @@ public class OrderDetailResource {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable("id") Integer id) {
+    public void delete(@PathVariable("id") Long id) {
         LOGGER.info("Call api delete ordertail : id [{}]", id);
         service.delete(id);
     }

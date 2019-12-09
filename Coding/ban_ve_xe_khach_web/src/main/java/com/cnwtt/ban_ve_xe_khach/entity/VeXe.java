@@ -3,27 +3,23 @@ package com.cnwtt.ban_ve_xe_khach.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="ve_xe")
+@Table(name = "ve_xe")
 public class VeXe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
+    private Long id;
+    @Column(name = "muc_gia")
     private Float mucGia;
-    private Integer viTriGhe;
-    private Integer idChuyenXe;
+    @Column(name = "vi_tri_ghe")
+    private Long viTriGhe;
+    @Column(name = "id_chuyen_xe")
+    private Long idChuyenXe;
 
-    public VeXe(Float mucGia, Integer viTriGhe, Integer idChuyenXe) {
-        this.mucGia = mucGia;
-        this.viTriGhe = viTriGhe;
-        this.idChuyenXe = idChuyenXe;
-    }
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -35,19 +31,19 @@ public class VeXe {
         this.mucGia = mucGia;
     }
 
-    public Integer getViTriGhe() {
+    public Long getViTriGhe() {
         return viTriGhe;
     }
 
-    public void setViTriGhe(Integer viTriGhe) {
+    public void setViTriGhe(Long viTriGhe) {
         this.viTriGhe = viTriGhe;
     }
 
-    public Integer getIdChuyenXe() {
+    public Long getIdChuyenXe() {
         return idChuyenXe;
     }
 
-    public void setIdChuyenXe(Integer idChuyenXe) {
+    public void setIdChuyenXe(Long idChuyenXe) {
         this.idChuyenXe = idChuyenXe;
     }
 }

@@ -41,7 +41,7 @@ public class VeXeService {
      * @return
      */
 
-    public VeXe findById(Integer id) {
+    public VeXe findById(Long id) {
         return repository.findById(id).get();
     }
 
@@ -63,7 +63,7 @@ public class VeXeService {
      * @return
      */
 
-    public void delete(Integer id){
+    public void delete(Long id){
         VeXe entity = findById(id);
         repository.delete(entity);
     }

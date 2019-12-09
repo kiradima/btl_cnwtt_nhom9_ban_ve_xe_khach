@@ -41,7 +41,7 @@ public class ViTriChuyenXeService {
      * @return
      */
 
-    public ViTriChuyenXe findById(Integer id) {
+    public ViTriChuyenXe findById(Long id) {
         return repository.findById(id).get();
     }
 
@@ -63,7 +63,7 @@ public class ViTriChuyenXeService {
      * @return
      */
 
-    public void delete(Integer id) {
+    public void delete(Long id) {
         ViTriChuyenXe entity = findById(id);
         repository.delete(entity);
     }

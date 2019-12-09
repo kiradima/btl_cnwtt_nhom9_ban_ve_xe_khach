@@ -9,11 +9,14 @@ public class OrderDetail implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(name = "id_order")
     private Integer idOrder;
+    @Column(name = "id_ve")
     private Integer idVe;
+    @Column(name = "id_diem_don")
     private Integer idDiemDon;
+    @Column(name = "id_diem_dung")
     private Integer idDiemDung;
-
 
     public Integer getId() {
         return id;
@@ -22,6 +25,7 @@ public class OrderDetail implements Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
     public Integer getIdOder() {
         return idOrder;
     }

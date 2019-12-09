@@ -11,7 +11,7 @@ public class ViTri {
     private Long id;
 
     @Column(name = "vi_tri")
-    private String location;
+    private String viTri;
 
     public Long getId() {
         return id;
@@ -21,11 +21,11 @@ public class ViTri {
         this.id = id;
     }
 
-    public String getLocation() {
-        return location;
+    public String getViTri() {
+        return viTri;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setViTri(String viTri) {
+        this.viTri = viTri;
     }
 }
