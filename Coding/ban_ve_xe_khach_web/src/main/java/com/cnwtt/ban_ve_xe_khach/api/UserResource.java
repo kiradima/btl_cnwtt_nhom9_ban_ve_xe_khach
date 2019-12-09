@@ -20,6 +20,13 @@ public class UserResource {
     @Autowired
     private UserService service;
 
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public ResponseEntity<User> login(@RequestParam(value = "username") String username,
+                                      @RequestParam(value = "password") String password) {
+        LOGGER.info("Call api login");
+        return ResponseEntity.ok(service.login(username, password));
+    }
+
     @PostMapping("/create")
     public ResponseEntity<User> save(@RequestBody User entity) {
         LOGGER.info("Call api create user");
@@ -46,8 +53,8 @@ public class UserResource {
 
     @GetMapping("/list")
     public Page<User> list(@RequestParam(value = "page", defaultValue = "1") int page,
-                               @RequestParam(value = "size", defaultValue = "20") int size,
-                               @RequestParam(value = "sort_by", defaultValue = "id") String sortField) {
+                           @RequestParam(value = "size", defaultValue = "20") int size,
+                           @RequestParam(value = "sort_by", defaultValue = "id") String sortField) {
         LOGGER.info("Call api list user");
         return service.getLists(PageRequest.of(page - 1, size, Sort.by(sortField)));
     }

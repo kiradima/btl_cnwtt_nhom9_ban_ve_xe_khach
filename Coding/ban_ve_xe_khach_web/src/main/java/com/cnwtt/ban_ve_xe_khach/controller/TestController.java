@@ -12,9 +12,9 @@ public class TestController {
     @Autowired
     private ChuyenXeService chuyenXeService;
 
-    @GetMapping("/a")
+    @GetMapping("/login")
     public String test(Model model){
         model.addAttribute("listChuyenXe", chuyenXeService.findAll());
-        return "index";
+        return "login";
     }
 }
