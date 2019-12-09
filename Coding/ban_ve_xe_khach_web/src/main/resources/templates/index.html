@@ -1,14 +1,101 @@
-<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-<!--    <h1 th:each="entity:${listLocation}" th:value="${entity.id}" th:text="${entity.location}"></h1>-->
-    <h1 th:each="entity:${listChuyenXe}" th:value="${entity.id}" th:text="${entity.loaiXe}"></h1>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tìm kiếm</title>
 
+<!--    <link type="text/css" rel="stylesheet" href="/libs/bootstrap/bootstrap.4.1.0.min.css">-->
+    <link type="text/css" rel="stylesheet" href="/libs/bootstrap/bootstrap-datepicker.css">
+    <link type="text/css" rel="stylesheet" href="/libs/jquery/jquery.dataTables.1.10.19.min.css">
+    <link type="text/css" rel="stylesheet" href="/libs/font-awesome.4.7.0.min.css">
+    <link type="text/css" rel="stylesheet" href="/libs/bootstrap/bootstrap-datepicker.css">
+    <link type="text/css" rel="stylesheet" href="/libs/jquery-ui/jquery-ui.1.12.1.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="/libs/jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/libs/jquery-ui/jquery-ui.1.12.1.min.js"></script>
+    <script type="text/javascript" src="/libs/jquery/jquery.dataTables.1.10.19.min.js"></script>
+    <script type="text/javascript" src="/libs/bootstrap/bootstrap.4.1.0.min.js"></script>
+    <script type="text/javascript" src="/libs/bootstrap/bootstrap-datepicker.js"></script>
+
+    <script type="text/javascript" src="/custom/js/index.js"></script>
 
 </head>
-<body>
+<style>
+    #example1 {
+        border: 1px solid black;
+        padding: 20px;
+        background: url(images/images.jpg);
+        background-repeat: no-repeat;
+        background-size: 1560px 860px;
+    }
+</style>
+<body id="example1">
+
+<div class="container containerCustom">
+    <div class="row" style="padding-top: 200px;">
+        <div class="font-weight-bold text-center" >
+            <h2>Đặt Vé Xe Rẻ, Tết Về Mạnh Khỏe - Vé Xe Tết 2020</h2>
+        </div>
+        <br>
+        <br>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <form action="" method="POST" class="form-horizontal" role="form">
+                <div class="form-group" style="padding-left: 5px; margin-left: 5px">
+                    <label>Điểm xuất phát</label>
+                    <select name="" id="start_loation" class="form-control" required="required">
+                        <option th:each="entity:${listViTri}" th:value="${entity.id}" th:text="${entity.viTri}"></option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <form action="" method="POST" class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label>Điểm đến</label>
+                    <select name="" id="end_location" class="form-control" required="required">
+                        <option th:each="entity:${listViTri}" th:value="${entity.id}" th:text="${entity.viTri}"></option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <form action="" method="POST" class="form-horizontal" role="form">
+                <div class="form-group" style="padding-left: 20px">
+                    <label>Ngày xuất phát</label>
+                    <div class="form-group">
+                        <div class="col-sm-10 input-group">
+                            <input type="text"  id="start_date" class="form-control" placeholder="MM/DD/YYYY" readonly>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+
+            <form action="" method="POST" class="form-horizontal" role="form">
+                <div class="form-group"></div>
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <button type="submit" class="btn btn-primary" style="margin-top: 10px">Tìm kiếm</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>
 
 </body>
+
 </html>

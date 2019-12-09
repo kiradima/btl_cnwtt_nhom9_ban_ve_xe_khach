@@ -27,7 +27,7 @@ public class OrderResource {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Order> get(@PathVariable("id") Integer id) {
+    public ResponseEntity<Order> get(@PathVariable("id") Long id) {
         LOGGER.info("Call api get order: id[{}]", id);
         return ResponseEntity.ok(service.findById(id));
     }
@@ -39,7 +39,7 @@ public class OrderResource {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable("id") Integer id) {
+    public void delete(@PathVariable("id") Long id) {
         LOGGER.info("Call api delete order : id [{}]", id);
         service.delete(id);
     }

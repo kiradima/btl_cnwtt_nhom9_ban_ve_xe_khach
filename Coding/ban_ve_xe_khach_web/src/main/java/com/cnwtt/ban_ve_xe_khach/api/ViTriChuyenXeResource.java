@@ -27,7 +27,7 @@ public class ViTriChuyenXeResource {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ViTriChuyenXe> get(@PathVariable("id") Integer id) {
+    public ResponseEntity<ViTriChuyenXe> get(@PathVariable("id") Long id) {
         LOGGER.info("Call api get vitrichuyenxe: id[{}]", id);
         return ResponseEntity.ok(service.findById(id));
     }
@@ -39,7 +39,7 @@ public class ViTriChuyenXeResource {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable("id") Integer id) {
+    public void delete(@PathVariable("id") Long id) {
         LOGGER.info("Call api delete vitrichuyenxe : id [{}]", id);
         service.delete(id);
     }

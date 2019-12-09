@@ -4,19 +4,15 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="order")
+@Table(name = "order")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
+    @Column(name = "timestamp")
     private Date timeStamp;
+    @Column(name = "id_user")
     private Integer idUser;
-
-    public Order(Date timeStamp, Integer idUser) {
-        this.timeStamp = timeStamp;
-        this.idUser = idUser;
-    }
 
     public Integer getId() {
         return id;

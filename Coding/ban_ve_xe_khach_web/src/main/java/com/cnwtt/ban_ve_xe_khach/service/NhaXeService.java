@@ -41,7 +41,7 @@ public class NhaXeService {
      * @return
      */
 
-    public NhaXe findById(Integer id) {
+    public NhaXe findById(Long id) {
         return repository.findById(id).get();
     }
 
@@ -63,7 +63,7 @@ public class NhaXeService {
      * @return
      */
 
-    public void delete(Integer id){
+    public void delete(Long id){
         NhaXe entity = findById(id);
         repository.delete(entity);
     }

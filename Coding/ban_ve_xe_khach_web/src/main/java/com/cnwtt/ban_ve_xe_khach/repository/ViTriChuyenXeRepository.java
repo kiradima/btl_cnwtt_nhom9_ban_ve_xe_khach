@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ViTriChuyenXeRepository extends JpaRepository<ViTriChuyenXe, Integer> {
+public interface ViTriChuyenXeRepository extends JpaRepository<ViTriChuyenXe, Long> {
     Page<ViTriChuyenXe> findAll(Pageable pageable);
 
 }

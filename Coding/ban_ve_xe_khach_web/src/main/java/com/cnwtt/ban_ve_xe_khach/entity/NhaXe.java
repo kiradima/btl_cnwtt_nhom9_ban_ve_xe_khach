@@ -3,29 +3,25 @@ package com.cnwtt.ban_ve_xe_khach.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="nha_xe")
+@Table(name = "nha_xe")
 public class NhaXe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
+    private Long id;
+    @Column(name = "ten")
     private String ten;
+    @Column(name = "url_logo")
     private String urlLogo;
+    @Column(name = "phone")
     private String phone;
+    @Column(name = "dia_chi")
     private String diaChi;
 
-    public NhaXe(String ten, String urlLogo, String phone, String diaChi) {
-        this.ten = ten;
-        this.urlLogo = urlLogo;
-        this.phone = phone;
-        this.diaChi = diaChi;
-    }
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -41,7 +41,7 @@ public class OrderDetailService {
      * @return
      */
 
-    public OrderDetail findById(Integer id) {
+    public OrderDetail findById(Long id) {
         return repository.findById(id).get();
     }
 
@@ -63,7 +63,7 @@ public class OrderDetailService {
      * @return
      */
 
-    public void delete(Integer id){
+    public void delete(Long id){
         OrderDetail entity = findById(id);
         repository.delete(entity);
     }

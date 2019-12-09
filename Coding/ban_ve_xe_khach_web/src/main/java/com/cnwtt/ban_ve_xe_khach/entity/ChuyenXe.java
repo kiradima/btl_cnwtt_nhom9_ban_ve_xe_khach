@@ -9,16 +9,14 @@ public class ChuyenXe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name="loai_xe")
+    @Column(name = "loai_xe")
     private String loaiXe;
-    @Column(name="chinh_sach_huy_ve")
+    @Column(name = "chinh_sach_huy_ve")
     private String chinhSachHuyVe;
-    @Column(name="luu_y")
+    @Column(name = "luu_y")
     private String luuY;
-    @Column(name="id_nha_xe")
-    private Integer idNhaXe;
-
+    @Column(name = "id_nha_xe")
+    private Long idNhaXe;
 
     public Long getId() {
         return id;
@@ -52,11 +50,11 @@ public class ChuyenXe {
         this.luuY = luuY;
     }
 
-    public Integer getIdNhaXe() {
+    public Long getIdNhaXe() {
         return idNhaXe;
     }
 
-    public void setIdNhaXe(Integer idNhaXe) {
+    public void setIdNhaXe(Long idNhaXe) {
         this.idNhaXe = idNhaXe;
     }
 }
