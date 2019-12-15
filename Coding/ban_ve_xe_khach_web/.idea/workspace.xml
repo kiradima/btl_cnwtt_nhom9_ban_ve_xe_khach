@@ -5,10 +5,24 @@
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/UserResource.java" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/LocationController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/TestController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/TrangChuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/TrangChuController.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/VeXeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/VeXeResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/ViTriChuyenXeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/ViTriChuyenXeResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/LocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/ChuyenXe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/ChuyenXe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/DanhGia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/DanhGia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/NhaXe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/NhaXe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/VeXe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/VeXe.java" afterDir="false" />
+>>>>>>> Giao dien thanh toan + trang chu
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/ViTri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/ViTri.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/bs3/css/bootstrap-theme.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/bs3/css/bootstrap-theme.css.map" beforeDir="false" />
@@ -67,6 +81,24 @@
         <item name="qlxk" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="dat_ve_xe_khach: schema" type="76f4a085:MysqlImplModel$Schema" />
+<<<<<<< HEAD
+=======
+        <item name="nha_xe: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="dat_ve_xe_khach@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dat_ve_xe_khach: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="order_detail: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="dat_ve_xe_khach@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dat_ve_xe_khach: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="vi_tri_chuyen_xe: table" type="285a2a93:MysqlImplModel$Table" />
+>>>>>>> Giao dien thanh toan + trang chu
       </path>
     </expand>
     <select />
@@ -111,7 +143,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="E:/Rabiloo/internal_management_system" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/libs" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.69770116" />
@@ -121,11 +153,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Demo\src\main\resources\static\libs" />
+      <recent name="C:\Demo\src\main\resources\static\custom\css" />
+      <recent name="C:\Demo\src\main\resources\static\images" />
       <recent name="C:\Demo\src\main\resources\templates" />
       <recent name="C:\Demo\src\main\java\com\nhom9\demo\api" />
-      <recent name="C:\Demo\src\main\java\com\nhom9\demo\service" />
-      <recent name="C:\Demo\src\main\java\com\nhom9\demo\repository" />
-      <recent name="C:\Demo\src\main\java\com\nhom9\demo\entity" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -163,12 +195,20 @@
       <workItem from="1575614611946" duration="28152000" />
       <workItem from="1575810648850" duration="710000" />
       <workItem from="1575853792269" duration="341000" />
+<<<<<<< HEAD
       <workItem from="1575898359408" duration="4008000" />
       <workItem from="1575614611946" duration="4797000" />
       <workItem from="1575801605720" duration="1177000" />
       <workItem from="1575802817117" duration="12000" />
       <workItem from="1575904462293" duration="8046000" />
       <workItem from="1575916460698" duration="357000" />
+=======
+      <workItem from="1575898359408" duration="5443000" />
+      <workItem from="1575967304185" duration="1801000" />
+      <workItem from="1576027407670" duration="26000" />
+      <workItem from="1576237424956" duration="11486000" />
+      <workItem from="1576380790549" duration="4441000" />
+>>>>>>> Giao dien thanh toan + trang chu
     </task>
     <servers />
   </component>
