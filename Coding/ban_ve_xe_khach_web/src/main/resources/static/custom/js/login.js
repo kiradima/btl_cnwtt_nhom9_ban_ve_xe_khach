@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('input').on("keypress", function (e) {
-        if (e.keyCode == 13) {
+        if (e.keyCode === 13) {
             $("#confirm_login").trigger('click');
         }
     });
@@ -19,7 +19,7 @@ $(document).ready(function () {
             return;
         }
 
-        $("#confirm_login").prop("disabled", true);
+        // $("#confirm_login").prop("disabled", true);
 
         var data = {
             username: username,
@@ -32,7 +32,11 @@ $(document).ready(function () {
             data: data,
             success: function (response) {
                 console.log(response);
-                window.location.href = "/";
+                if (response.code === 200) {
+                    window.location.href = "/";
+                } else {
+                    alert(response.message)
+                }
             },
             error: function (error) {
                 console.log(error);

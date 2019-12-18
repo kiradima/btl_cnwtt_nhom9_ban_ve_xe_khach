@@ -22,16 +22,19 @@ public class UserResource {
 
     @RequestMapping(value = "/login", produces = "application/json", method = RequestMethod.POST)
     public @ResponseBody
-    ResponseEntity<User> login(@ModelAttribute Login login) {
+    ResponseEntity<Response> login(@ModelAttribute Login login) {
+        LOGGER.info(login.getUsername());
+        LOGGER.info(login.getPassword());
         LOGGER.info("Call api login");
-        return ResponseEntity.ok(service.login(login.getUsername(), login.getPassword()));
+        int code = 200;
+        String message = "Success";
+        User user = service.login(login.getUsername(), login.getPassword());
+        if (user == null) {
+            code = 400;
+            message = "Username or password is incorrect!";
+        }
+        return ResponseEntity.ok(new Response(code, message, service.login(login.getUsername(), login.getPassword())));
     }
-//    @PostMapping(value = "/login")
-//    @ResponseBody
-//    public ResponseEntity<User> login(@RequestBody Login login) {
-//        LOGGER.info("Call api login");
-//        return ResponseEntity.ok(service.login(login.getUsername(), login.getPassword()));
-//    }
 
     @PostMapping("/create")
     public ResponseEntity<User> save(@RequestBody User entity) {
@@ -64,6 +67,4 @@ public class UserResource {
         LOGGER.info("Call api list user");
         return service.getLists(PageRequest.of(page - 1, size, Sort.by(sortField)));
     }
-
-
 }
