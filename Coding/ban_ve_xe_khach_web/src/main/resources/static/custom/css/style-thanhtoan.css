@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.float_left {
+    float: left;
+}
+
+.float_right {
+    float: right;
+}
+
+.display_none {
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
+.header {
+    padding-top: 10px;
+    background: #095aa9;
+    height: 80px;
+}
+
+.logoheader,
+.logoheader {
+    float: left;
+}
+
+.logoheader {
+    width: 100px;
+    margin-left: 50px;
+}
+
+.menu>li {
+    float: right;
+    margin-right: 15px;
+}
+
+.menu>li>a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* ==============header_2============== */
+
+.header_2 {
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-bottom: 5px;
+    height: 35px;
+    background-color: #f9af00;
+}
+/* =============main content======================= */
+.main-content{
+    padding-top: 20px;
+}
+.left-content{
+    width: 700px;
+}
+.right-content{
+    width: 300px;
+}
+/* ============================== */
+.lefc-table{
+    /* width: 600px; */
+    height: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-radius: 4px;
+    background: white;
+    padding: 20px;
+    margin-right: 0px;
+}
+.orderseat-content{
+    width: 80%;
+    margin: 0 auto;
+}
+.plane{
+    max-width: 300px;
+    /* margin: 0 auto; */
+}
+.
+.ods_intrs {
+    width: 100%;
+    height: 100px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding-left: 80px;
+    margin: 0 auto;
+}
+
+.color {
+    margin-right: 5px;
+}
+
+.idsch {
+    margin-right: 30px;
+}
+
+.icon_exit>img {
+    width: 30px;
+}
+.lebtn-cus{
+    width: 100%;
+    height: 30px;
+    background-color: #f9af00;
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    color: #443344;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* ====================right-cont=============== */
+.right-content{
+    width: 430px;
+}
+.right-table{
+    /* height: ; */
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-radius: 4px;
+    background: white;
+    padding: 15px;
+    margin-right: 0px;
+}
+.row-cont{
+    width: 390px;
+    height: 25px;
+}
+.rc-label{
+    font-weight: bold;
+    color: #443344;
+    font-size: 16px;
+}
+.rc-info{
+    font-size: 15px;
+    color: #443344;
+}
+.border_bot{
+    height: 30px;
+    margin-bottom: 3px;
+    border-bottom: 1px solid  rgb(192, 192, 192);
+}
+/* ====================Nhập mã giảm giá=============== */
+
+.input-custom-rr{
+    width: 280px;
+    height: 30px;
+    padding-left: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-radius: 4px;
+}
+.btn-custom-rr{
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-radius: 4px;
+    background-color: #fff;
+    height: 30px;
+    width: 100px;
+    font-size: 13px;
+    margin-left: 10px;
+}
+.btn-custom-rr:hover{
+    border-color:#095aa9;
+    color: #095aa9;
+;
+}
+.label_tt{
+    font-size: 20px;
+    color: #443344;
+    font-weight: bold;
+}
+.mn-tt{
+    font-size: 21px;
+    color: #095aa9;
+    font-weight: bold;
+}
+/* ====================footer=================== */
+.footer {
+    background-color: #333333;
+    height: 230px;
+}
+
+.about {
+    widows: 250px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.about_title {
+    width: 200px;
+    font-size: 14px;
+    /* height: 30px; */
+    color: #ffffff;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.about_cont {
+    width: 200px;
+    font-size: 12px;
+    color: #ffffff;
+    border-bottom: 1px solid #fff;
+}
+
+.abco {
+    margin-top: 9px;
+}
+
+.abco_icon {
+    margin-top: 4px;
+    margin-right: 2px;
+}
+
+.abco_icon>img {
+    width: 20px;
+}
+
+.abco_cont {
+    margin-left: 5px;
+    width: 180px;
+    color: #ffffff;
+}
+
+
+
