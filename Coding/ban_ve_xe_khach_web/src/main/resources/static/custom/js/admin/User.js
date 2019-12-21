@@ -73,7 +73,7 @@ $(document).ready(function () {
                 "visible": false
             },
             {
-                "targets": [5]
+                "targets": [5],
                 "visible": false
             }
         ],
