@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5fa2fce9-2377-4b0b-8097-fd7961f0e6c4" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="5fa2fce9-2377-4b0b-8097-fd7961f0e6c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/NhaXeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/NhaXeResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/request/SearchRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/request/trangdautien/SearchRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/resource/TrangDauTienResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/resource/TrangDauTienResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/response/SearchResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/response/trangdautien/SearchResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/ChuyenXe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/ChuyenXe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/VeXe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/entity/VeXe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/repository/ChuyenXeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/repository/ChuyenXeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/repository/OrderDetailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/repository/OrderDetailRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/service/NhaXeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/service/NhaXeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/service/OrderDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/service/OrderDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/custom/js/trang_chu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/trang_chu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/custom/js/trangdautien.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/trangdautien.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/trangchu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/trangchu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/entity/VeXe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/entity/VeXe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/repository/ChuyenXeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cnwtt/ban_ve_xe_khach/repository/ChuyenXeRepository.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +54,13 @@
         <item name="dat_ve_xe_khach@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="dat_ve_xe_khach: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="dat_ve_xe_khach@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dat_ve_xe_khach: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="ve_xe: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -90,21 +114,22 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/libs" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.69770116" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="liveEdit" />
     <property name="settings.editor.splitter.proportion" value="0.2281746" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kira\Documents\tien_tien_2\btl_cnwtt_nhom9_ban_ve_xe_khach\Coding\ban_ve_xe_khach_web\src\main\resources\static\images" />
       <recent name="C:\ban_ve_xe_khach_web\src\main\resources\static\libs" />
       <recent name="C:\Demo\src\main\resources\static\libs" />
       <recent name="C:\Demo\src\main\resources\static\custom\css" />
       <recent name="C:\Demo\src\main\resources\static\images" />
-      <recent name="C:\Demo\src\main\resources\templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -200,10 +225,12 @@
       <workItem from="1576027407670" duration="26000" />
       <workItem from="1576237424956" duration="11486000" />
       <workItem from="1576380790549" duration="4441000" />
-      <workItem from="1576681436546" duration="1426000" />
-      <workItem from="1576683133062" duration="418000" />
-      <workItem from="1576718072352" duration="41000" />
-      <workItem from="1576777629957" duration="25674000" />
+      <workItem from="1576662344143" duration="19614000" />
+      <workItem from="1576739836622" duration="5331000" />
+      <workItem from="1576779997431" duration="206000" />
+      <workItem from="1576937360993" duration="250000" />
+      <workItem from="1576937672814" duration="226000" />
+      <workItem from="1576937918726" duration="28095000" />
     </task>
     <servers />
   </component>
@@ -228,45 +255,105 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="26" key="#Assign_Data_Sources/0.0.1366.728@0.0.1366.728" timestamp="1576919315342" />
+    <state x="550" y="31" key="#Notifications" timestamp="1576937882605">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="550" y="31" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1576937882605" />
+    <state x="550" y="31" key="#Plugins" timestamp="1576938299471">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="550" y="31" key="#Plugins/0.0.1366.728@0.0.1366.728" timestamp="1576938299471" />
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576919688767">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1576919688767" />
-    <state width="1286" height="244" key="GridCell.Tab.0.bottom" timestamp="1576919972308">
+    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser" timestamp="1577052877771">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="244" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576919972308" />
-    <state width="1286" height="244" key="GridCell.Tab.0.center" timestamp="1576919972308">
+    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1577052877771" />
+    <state x="450" y="233" width="466" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1576943270778">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="244" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1576919972308" />
-    <state width="1286" height="244" key="GridCell.Tab.0.left" timestamp="1576919972308">
+    <state x="450" y="233" width="466" height="267" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1576943270778" />
+    <state x="322" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1577052940311">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="244" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1576919972308" />
-    <state width="1286" height="244" key="GridCell.Tab.0.right" timestamp="1576919972308">
+    <state x="322" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1577052940310" />
+    <state width="1323" height="230" key="GridCell.Tab.0.bottom" timestamp="1577053024482">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="244" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1576919972308" />
-    <state width="1286" height="244" key="GridCell.Tab.1.bottom" timestamp="1576919972309">
+    <state width="1323" height="230" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577053024482" />
+    <state width="1323" height="230" key="GridCell.Tab.0.center" timestamp="1577053024482">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="244" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576919972309" />
-    <state width="1286" height="244" key="GridCell.Tab.1.center" timestamp="1576919972308">
+    <state width="1323" height="230" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1577053024482" />
+    <state width="1323" height="230" key="GridCell.Tab.0.left" timestamp="1577053024482">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="244" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1576919972308" />
-    <state width="1286" height="244" key="GridCell.Tab.1.left" timestamp="1576919972308">
+    <state width="1323" height="230" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1577053024482" />
+    <state width="1323" height="230" key="GridCell.Tab.0.right" timestamp="1577053024482">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="244" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1576919972308" />
-    <state width="1286" height="244" key="GridCell.Tab.1.right" timestamp="1576919972309">
+    <state width="1323" height="230" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1577053024482" />
+    <state width="1323" height="230" key="GridCell.Tab.1.bottom" timestamp="1577053024483">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="244" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1576919972309" />
-    <state x="735" y="28" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1576919578284">
+    <state width="1323" height="230" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577053024483" />
+    <state width="1323" height="230" key="GridCell.Tab.1.center" timestamp="1577053024483">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="735" y="28" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1576919578284" />
+    <state width="1323" height="230" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1577053024483" />
+    <state width="1323" height="230" key="GridCell.Tab.1.left" timestamp="1577053024483">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="230" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1577053024483" />
+    <state width="1323" height="230" key="GridCell.Tab.1.right" timestamp="1577053024483">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="230" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1577053024483" />
+    <state width="1323" height="222" key="GridCell.Tab.2.bottom" timestamp="1576994308838">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="222" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576994308838" />
+    <state width="1323" height="222" key="GridCell.Tab.2.center" timestamp="1576994308838">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="222" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1576994308838" />
+    <state width="1323" height="222" key="GridCell.Tab.2.left" timestamp="1576994308838">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="222" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1576994308838" />
+    <state width="1323" height="222" key="GridCell.Tab.2.right" timestamp="1576994308838">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="222" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1576994308838" />
+    <state x="186" y="15" key="SettingsEditor" timestamp="1576938352812">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="186" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1576938352812" />
+    <state x="562" y="247" width="319" height="233" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1577000663835">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="562" y="247" width="319" height="233" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.728@0.0.1366.728" timestamp="1577000663835" />
+    <state x="484" y="197" width="397" height="333" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1577051977512">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="484" y="197" width="397" height="333" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1366.728@0.0.1366.728" timestamp="1577051977512" />
+    <state x="735" y="28" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1577051993873">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="735" y="28" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1577051993873" />
+    <state x="391" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1576944187536">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="391" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1576944187536" />
+    <state x="339" y="164" key="run.anything.popup" timestamp="1577000868066">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1577000868066" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1576941608692">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1576941608692" />
   </component>
 </project>

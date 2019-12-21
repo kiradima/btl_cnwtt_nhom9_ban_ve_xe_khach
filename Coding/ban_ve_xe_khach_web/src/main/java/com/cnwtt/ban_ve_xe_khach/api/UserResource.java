@@ -33,7 +33,7 @@ public class UserResource {
             code = 400;
             message = "Username or password is incorrect!";
         }
-        return ResponseEntity.ok(new Response(code, message, service.login(login.getUsername(), login.getPassword())));
+        return ResponseEntity.ok(new Response(code, message, user));
     }
 
     @PostMapping("/create")

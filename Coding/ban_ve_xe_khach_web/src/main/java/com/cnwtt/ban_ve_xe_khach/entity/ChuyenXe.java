@@ -8,7 +8,7 @@ public class ChuyenXe {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     @Column(name = "loai_xe")
     private String loaiXe;
     @Column(name = "chinh_sach_huy_ve")
@@ -16,13 +16,39 @@ public class ChuyenXe {
     @Column(name = "luu_y")
     private String luuY;
     @Column(name = "id_nha_xe")
-    private Long idNhaXe;
+    private int idNhaXe;
+    @Column(name = "so_ghe")
+    private int soGhe;
+    @Column(name = "muc_gia")
+    private float mucGia;
 
-    public Long getId() {
+    public ChuyenXe(int id, String loaiXe, String chinhSachHuyVe,
+                    String luuY, int idNhaXe, int soGhe, float mucGia) {
+        this.id = id;
+        this.loaiXe = loaiXe;
+        this.chinhSachHuyVe = chinhSachHuyVe;
+        this.luuY = luuY;
+        this.idNhaXe = idNhaXe;
+        this.soGhe = soGhe;
+        this.mucGia = mucGia;
+    }
+
+    public ChuyenXe() {
+    }
+
+    public float getMucGia() {
+        return mucGia;
+    }
+
+    public void setMucGia(float mucGia) {
+        this.mucGia = mucGia;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -50,11 +76,19 @@ public class ChuyenXe {
         this.luuY = luuY;
     }
 
-    public Long getIdNhaXe() {
+    public int getIdNhaXe() {
         return idNhaXe;
     }
 
-    public void setIdNhaXe(Long idNhaXe) {
+    public void setIdNhaXe(int idNhaXe) {
         this.idNhaXe = idNhaXe;
+    }
+
+    public int getSoGhe() {
+        return soGhe;
+    }
+
+    public void setSoGhe(int soGhe) {
+        this.soGhe = soGhe;
     }
 }

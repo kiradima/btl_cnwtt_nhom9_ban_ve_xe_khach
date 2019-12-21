@@ -1,69 +1,70 @@
 package com.cnwtt.ban_ve_xe_khach.entity;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name = "vi_tri_chuyen_xe")
 public class ViTriChuyenXe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     @Column(name = "id_vi_tri")
-    private Integer idViTri;
+    private int idViTri;
     @Column(name = "id_chuyen_xe")
-    private Long idChuyenXe;
+    private int idChuyenXe;
     @Column(name = "thoi_diem_du_kien")
-    private Date thoiDiemDuKien;
+    private String thoiDiemDuKien;
     @Column(name = "type")
-    private Long type;
+    private int type;
 
-    public ViTriChuyenXe(Integer idViTri, Long idChuyenXe, Date thoiDiemDuKien, Long type) {
+    public ViTriChuyenXe() {
+    }
+
+    public ViTriChuyenXe(int id, int idViTri, int idChuyenXe, String thoiDiemDuKien, int type){
+        this.id = id;
         this.idViTri = idViTri;
         this.idChuyenXe = idChuyenXe;
         this.thoiDiemDuKien = thoiDiemDuKien;
         this.type = type;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Integer getIdViTri() {
+    public int getIdViTri() {
         return idViTri;
     }
 
-    public void setIdViTri(Integer idViTri) {
+    public void setIdViTri(int idViTri) {
         this.idViTri = idViTri;
     }
 
-    public Long getIdChuyenXe() {
+    public int getIdChuyenXe() {
         return idChuyenXe;
     }
 
-    public void setIdChuyenXe(Long idChuyenXe) {
+    public void setIdChuyenXe(int idChuyenXe) {
         this.idChuyenXe = idChuyenXe;
     }
 
-    public Date getThoiDiemDuKien() {
+    public String getThoiDiemDuKien() {
         return thoiDiemDuKien;
     }
 
-    public void setThoiDiemDuKien(Date thoiDiemDuKien) {
+    public void setThoiDiemDuKien(String thoiDiemDuKien) {
         this.thoiDiemDuKien = thoiDiemDuKien;
     }
 
-    public Long getType() {
+    public int getType() {
         return type;
     }
 
-    public void setType(Long type) {
+    public void setType(int type) {
         this.type = type;
     }
 }

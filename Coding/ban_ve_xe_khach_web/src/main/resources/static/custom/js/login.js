@@ -19,8 +19,6 @@ $(document).ready(function () {
             return;
         }
 
-        // $("#confirm_login").prop("disabled", true);
-
         var data = {
             username: username,
             password: password
@@ -33,6 +31,7 @@ $(document).ready(function () {
             success: function (response) {
                 console.log(response);
                 if (response.code === 200) {
+                    localStorage.setItem("user", JSON.stringify(response.data));
                     window.location.href = "/";
                 } else {
                     alert(response.message)

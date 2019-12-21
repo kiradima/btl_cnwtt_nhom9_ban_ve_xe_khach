@@ -46,11 +46,15 @@ public class ViTriChuyenXeResource {
 
     @GetMapping("/list")
     public Page<ViTriChuyenXe> list(@RequestParam(value = "page", defaultValue = "1") int page,
-                               @RequestParam(value = "size", defaultValue = "20") int size,
-                               @RequestParam(value = "sort_by", defaultValue = "id") String sortField) {
+                                    @RequestParam(value = "size", defaultValue = "20") int size,
+                                    @RequestParam(value = "sort_by", defaultValue = "id") String sortField) {
         LOGGER.info("Call api list vitrichuyenxe");
         return service.getLists(PageRequest.of(page - 1, size, Sort.by(sortField)));
     }
 
-
+    @GetMapping("/get/chuyenxe_type")
+    public ResponseEntity<Response> findByIdChuyenXeAndType(@RequestParam(value = "idChuyenXe") int idChuyenXe,
+                                                            @RequestParam(value = "type") int type) {
+        return ResponseEntity.ok(new Response(200, "success", service.findByIdChuyenXeAndType(idChuyenXe, type)));
+    }
 }

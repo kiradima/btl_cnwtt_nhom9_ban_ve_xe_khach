@@ -8,21 +8,21 @@ public class DanhGia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     @Column(name = "noi_dung")
     private String noiDung;
     @Column(name = "id_user")
-    private Integer idUser;
+    private int idUser;
     @Column(name = "id_chuyen_xe")
-    private Integer idChuyenXe;
+    private int idChuyenXe;
     @Column(name = "sao")
-    private Integer sao;
+    private int sao;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -34,27 +34,27 @@ public class DanhGia {
         this.noiDung = noiDung;
     }
 
-    public Integer getIdUser() {
+    public int getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(Integer idUser) {
+    public void setIdUser(int idUser) {
         this.idUser = idUser;
     }
 
-    public Integer getIdChuyenXe() {
+    public int getIdChuyenXe() {
         return idChuyenXe;
     }
 
-    public void setIdChuyenXe(Integer idChuyenXe) {
+    public void setIdChuyenXe(int idChuyenXe) {
         this.idChuyenXe = idChuyenXe;
     }
 
-    public Integer getSao() {
+    public int getSao() {
         return sao;
     }
 
-    public void setSao(Integer sao) {
+    public void setSao(int sao) {
         this.sao = sao;
     }
 }

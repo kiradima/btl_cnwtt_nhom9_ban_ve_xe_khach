@@ -7,49 +7,38 @@ import javax.persistence.*;
 public class VeXe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(name = "muc_gia")
-    private Float mucGia;
+    private int id;
     @Column(name = "vi_tri_ghe")
-    private Long viTriGhe;
+    private String viTriGhe;
     @Column(name = "id_chuyen_xe")
-    private Long idChuyenXe;
+    private int idChuyenXe;
 
-    public VeXe(Float mucGia, Long viTriGhe, Long idChuyenXe) {
-        this.mucGia = mucGia;
+    public VeXe(String viTriGhe, int idChuyenXe) {
         this.viTriGhe = viTriGhe;
         this.idChuyenXe = idChuyenXe;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Float getMucGia() {
-        return mucGia;
-    }
-
-    public void setMucGia(Float mucGia) {
-        this.mucGia = mucGia;
-    }
-
-    public Long getViTriGhe() {
+    public String getViTriGhe() {
         return viTriGhe;
     }
 
-    public void setViTriGhe(Long viTriGhe) {
+    public void setViTriGhe(String viTriGhe) {
         this.viTriGhe = viTriGhe;
     }
 
-    public Long getIdChuyenXe() {
+    public int getIdChuyenXe() {
         return idChuyenXe;
     }
 
-    public void setIdChuyenXe(Long idChuyenXe) {
+    public void setIdChuyenXe(int idChuyenXe) {
         this.idChuyenXe = idChuyenXe;
     }
 }

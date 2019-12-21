@@ -24,48 +24,33 @@ public class DanhGiaService {
         return repository.findAll();
     }
 
-    /**
-     * Create
-     *
-     * @param entity
-     * @return
-     */
     public DanhGia create(DanhGia entity) {
         return repository.save(entity);
     }
-
-    /**
-     * Read
-     *
-     * @param id
-     * @return
-     */
 
     public DanhGia findById(Long id) {
         return repository.findById(id).get();
     }
 
-    /**
-     * Update
-     *
-     * @param entity
-     * @return
-     */
-
-    public DanhGia update(DanhGia entity){
+    public DanhGia update(DanhGia entity) {
         return repository.save(entity);
     }
 
-    /**
-     * Delete
-     *
-     * @param id
-     * @return
-     */
-
-    public void delete(Long id){
+    public void delete(Long id) {
         DanhGia entity = findById(id);
         repository.delete(entity);
+    }
+
+    public List<DanhGia> findByIdChuyenXe(long idChuyenXe) {
+        return repository.findByIdChuyenXe(idChuyenXe);
+    }
+
+    public String star(int idChuyenXe) {
+        return repository.star(idChuyenXe);
+    }
+
+    public int countComment(int idChuyenXe) {
+        return repository.countComment(idChuyenXe);
     }
 
 }

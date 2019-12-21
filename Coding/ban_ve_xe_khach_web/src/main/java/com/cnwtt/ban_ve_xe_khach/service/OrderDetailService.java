@@ -24,48 +24,29 @@ public class OrderDetailService {
         return repository.findAll();
     }
 
-    /**
-     * Create
-     *
-     * @param entity
-     * @return
-     */
     public OrderDetail create(OrderDetail entity) {
         return repository.save(entity);
     }
-
-    /**
-     * Read
-     *
-     * @param id
-     * @return
-     */
 
     public OrderDetail findById(Long id) {
         return repository.findById(id).get();
     }
 
-    /**
-     * Update
-     *
-     * @param entity
-     * @return
-     */
-
-    public OrderDetail update(OrderDetail entity){
+    public OrderDetail update(OrderDetail entity) {
         return repository.save(entity);
     }
 
-    /**
-     * Delete
-     *
-     * @param id
-     * @return
-     */
-
-    public void delete(Long id){
+    public void delete(Long id) {
         OrderDetail entity = findById(id);
         repository.delete(entity);
+    }
+
+    public long count() {
+        return repository.count();
+    }
+
+    public List<String> getListViTriGheOrderedByIdChuyenXe(int idChuyenXe) {
+        return repository.getListViTriGheOrderedByIdChuyenXe(idChuyenXe);
     }
 
 }

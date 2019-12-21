@@ -4,13 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Danh sách chuyến xe</title>
-    <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="libs/bs3/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="libs/bs3/css/bootstrap.min.css">
     <link rel="stylesheet" href="libs/bs3/css/bootstrap.min.css.map">
     <link rel="stylesheet" href="libs/bs3/css/bootstrap-theme.min.css.map">
     <link rel="stylesheet" href="custom/css/style-pageOne.css">
-    <link rel="stylesheet" href="custom/js/trangdautien.js">
+    <script src="/libs/jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/libs/bootstrap/bootstrap.4.1.0.min.js"></script>
+    <script type="text/javascript" src="/custom/js/layouts/common_component.js"></script>
+    <script type="text/javascript" src="/custom/js/trangdautien.js"></script>
 </head>
 <body style="
         background: url(images/images.jpg) no-repeat;
@@ -18,60 +20,39 @@
 <div class="container containerCustom">
     <div class="row" style="padding-top: 300px;">
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <form action="" method="POST" class="form-horizontal" role="form">
-                <div class="form-group">
-                    <legend>Điểm xuất phát</legend>
-                    <select name="" id="diem_xuat_phat" class="form-control" required="required">
-                        <option th:each="viTri:${viTris}" th:value="${viTri.id}" th:text="${viTri.tinh}"></option>
-                    </select>
-                </div>
-            </form>
+            <div class="form-group">
+                <label for="diem_xuat_phat">Điểm xuất phát</label>
+                <select name="" id="diem_xuat_phat" class="form-control" required="required">
+                    <option th:each="viTri:${viTris}" th:value="${viTri.tinh}" th:text="${viTri.tinh}"></option>
+                </select>
+            </div>
         </div>
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <form action="" method="POST" class="form-horizontal" role="form">
-                <div class="form-group">
-                    <legend>Điểm đến</legend>
-                    <select name="" id="dien_den" class="form-control" required="required">
-                        <option th:each="viTri:${viTris}" th:value="${viTri.id}" th:text="${viTri.tinh}"></option>
-                    </select>
-                </div>
-            </form>
+            <div class="form-group">
+                <label for="diem_dung">Điểm đến</label>
+                <select name="" id="diem_dung" class="form-control" required="required">
+                    <option th:each="viTri:${viTris}" th:value="${viTri.tinh}" th:text="${viTri.tinh}"></option>
+                </select>
+            </div>
         </div>
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <form action="" method="POST" class="form-horizontal" role="form">
+            <div class="form-group">
                 <div class="form-group">
-                    <legend>Ngày xuất phát</legend>
-                    <div class="form-group">
-                        <div class="col-sm-10">
-                            <input type="date" name="" id="ngay_xuat_phat" class="form-control" onload="getDate()"
-                                   required="required">
-                        </div>
+                    <div class="col-sm-10">
+                        <label for="ngay_xuat_phat">Ngày xuất phát</label>
+                        <input type="date" name="" id="ngay_xuat_phat" class="form-control" required="required">
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
-
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-
-            <form action="" method="POST" class="form-horizontal" role="form">
-                <div class="form-group"></div>
-
-
-                <div class="form-group">
-                    <div class="col-sm-10 col-sm-offset-2">
-                        <button type="submit" class="btn btn-primary">Tìm kiếm</button>
-                    </div>
+            <div class="form-group">
+                <div class="col-sm-10 col-sm-offset-2">
+                    <button class="btn btn-primary" id="tim_kiem">Tìm kiếm</button>
                 </div>
-            </form>
-
+            </div>
         </div>
-
     </div>
 </div>
-
-
-<script src="bs3/js/bootstrap.min.js"></script>
-
 </body>
-
 </html>
