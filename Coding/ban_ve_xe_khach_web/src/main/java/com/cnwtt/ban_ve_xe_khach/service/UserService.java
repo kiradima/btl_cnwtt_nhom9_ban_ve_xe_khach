@@ -71,7 +71,7 @@ public class UserService {
     public User login(String username, String password) {
         List<User> users = findAllUser();
         for (User user : users) {
-            if (user.getUserName().equals(username) && user.getPassword().equals(password)) {
+            if (user.getEmail().equals(username) && user.getPassword().equals(password)) {
                 return user;
             }
         }

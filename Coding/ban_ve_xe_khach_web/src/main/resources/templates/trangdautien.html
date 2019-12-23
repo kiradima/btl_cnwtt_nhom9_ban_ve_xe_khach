@@ -23,7 +23,7 @@
             <div class="form-group">
                 <label for="diem_xuat_phat">Điểm xuất phát</label>
                 <select name="" id="diem_xuat_phat" class="form-control" required="required">
-                    <option th:each="viTri:${viTris}" th:value="${viTri.tinh}" th:text="${viTri.tinh}"></option>
+                    <option th:each="tinh:${tinhs}" th:value="${tinh}" th:text="${tinh}"></option>
                 </select>
             </div>
         </div>
@@ -31,7 +31,7 @@
             <div class="form-group">
                 <label for="diem_dung">Điểm đến</label>
                 <select name="" id="diem_dung" class="form-control" required="required">
-                    <option th:each="viTri:${viTris}" th:value="${viTri.tinh}" th:text="${viTri.tinh}"></option>
+                    <option th:each="tinh:${tinhs}" th:value="${tinh}" th:text="${tinh}"></option>
                 </select>
             </div>
         </div>

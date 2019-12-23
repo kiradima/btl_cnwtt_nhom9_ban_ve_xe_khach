@@ -1,6 +1,5 @@
 package com.cnwtt.ban_ve_xe_khach.api;
 
-import com.cnwtt.ban_ve_xe_khach.entity.Login;
 import com.cnwtt.ban_ve_xe_khach.entity.User;
 import com.cnwtt.ban_ve_xe_khach.service.UserService;
 import org.slf4j.Logger;
@@ -19,22 +18,6 @@ public class UserResource {
 
     @Autowired
     private UserService service;
-
-    @RequestMapping(value = "/login", produces = "application/json", method = RequestMethod.POST)
-    public @ResponseBody
-    ResponseEntity<Response> login(@ModelAttribute Login login) {
-        LOGGER.info(login.getUsername());
-        LOGGER.info(login.getPassword());
-        LOGGER.info("Call api login");
-        int code = 200;
-        String message = "Success";
-        User user = service.login(login.getUsername(), login.getPassword());
-        if (user == null) {
-            code = 400;
-            message = "Username or password is incorrect!";
-        }
-        return ResponseEntity.ok(new Response(code, message, user));
-    }
 
     @PostMapping("/create")
     public ResponseEntity<User> save(@RequestBody User entity) {

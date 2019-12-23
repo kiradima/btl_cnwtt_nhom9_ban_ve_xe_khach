@@ -6,27 +6,26 @@ $(document).ready(function () {
     });
 
     $("#confirm_login").on('click', function () {
-        var username = $("#username").val();
+        var email = $("#email").val();
         var password = $("#password").val();
-
-        if (username === null || username === "" || username.trim() === "") {
+        if (email === null || email === "" || email.trim() === "") {
             window.component.alert.show("error", "Please input email", 2000);
             return;
         }
-
         if (password === null || password === "" || password.trim() === "") {
             window.component.alert.show("error", "Please input password", 2000);
             return;
         }
-
         var data = {
-            username: username,
+            email: email,
             password: password
         };
+        console.log(email);
+        console.log(password);
 
         $.ajax({
             type: 'POST',
-            url: "/api/v1/user/login",
+            url: "/api/v1/login/",
             data: data,
             success: function (response) {
                 console.log(response);
@@ -39,11 +38,11 @@ $(document).ready(function () {
             },
             error: function (error) {
                 console.log(error);
-                window.component.alert.show("error", "Username or password is incorrect!!!", 2000);
+                window.component.alert.show("error", "email or password is incorrect!!!", 2000);
                 setTimeout(function () {
                     $("#confirm_login").prop("disabled", false);
                 }, 1000)
             }
         });
-    })
-})
+    });
+});

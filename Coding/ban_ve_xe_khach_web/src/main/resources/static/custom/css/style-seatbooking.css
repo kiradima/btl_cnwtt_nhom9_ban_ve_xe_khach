@@ -31,13 +31,20 @@ ol {
 }
 
 .seat {
-  display: flex;
+  display: none;
   flex: 0 0 14.28571428571429%;
   padding: 2px;
   position: relative;
 }
 
+.seat label{
+  background: #dddddd;
+  cursor: pointer;
+  box-shadow: 0 0 0px 2px #e0f1ff;
+}
+
 .seat input[type=checkbox] {
+  background: #dddddd;
   position: absolute;
   opacity: 0;
 }
@@ -49,7 +56,7 @@ ol {
   /* animation-fill-mode: both; */
 }
 .seat input[type=checkbox]:disabled + label {
-  background: #dddddd;
+  background: #F42536;
   text-indent: -9999px;
   overflow: hidden;
 }
@@ -74,7 +81,6 @@ ol {
   font-weight: bold;
   line-height: 1.5rem;
   padding: 4px 0;
-  background: #F42536;
   border-radius: 5px;
   animation-duration: 300ms;
   animation-fill-mode: both;
@@ -90,7 +96,7 @@ ol {
   background: rgba(255, 255, 255, 0.4);
   border-radius: 3px;
 }
-.seat label:hover {
+.seat label:hover{
   cursor: pointer;
   box-shadow: 0 0 0px 2px #5C6AFF;
 }

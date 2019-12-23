@@ -26,15 +26,15 @@
     <div class="header">
         <div class="logo_header">
             <a href="/trang-chu">
-                <img class="logoheader" src="/images/logo.svg" alt="">
+                <img class="logoheader" src="/static/images/logo.svg" alt="">
             </a>
         </div>
         <div class="menu_header">
             <ul class="menu">
-                <li><a href="">Trang chủ</a></li>
+                <li><a href="/">Tìm Kiếm Chuyến Đi</a></li>
                 <li><a href="">Tin tức</a></li>
                 <li><a href="">Khuyến mãi</a></li>
-                <li id="nav_login" hidden><a href="/login">Đăng nhập</a></li>
+                <li id="nav_login" hidden><a href="/loginRequest">Đăng nhập</a></li>
                 <li id="nav_register" hidden><a href="">Đăng ký</a></li>
             </ul>
         </div>
@@ -43,7 +43,7 @@
         <div class="header_input_form">
             <label for="start_location">Điểm xuất phát</label>
             <select name="" id="start_location" class="form-control" required="required">
-                <option th:each="entity:${viTris}" th:value="${entity.id}" th:text="${entity.tinh}"></option>
+                <option th:each="tinh:${tinhs}" th:value="${tinh}" th:text="${tinh}"></option>
             </select>
         </div>
         <div class="header_input_icon">
@@ -52,12 +52,12 @@
         <div class="header_input_form">
             <label for="end_location">Điểm kết thúc</label>
             <select name="" id="end_location" class="form-control" required="required">
-                <option th:each="entity:${viTris}" th:value="${entity.id}" th:text="${entity.tinh}"></option>
+                <option th:each="tinh:${tinhs}" th:value="${tinh}" th:text="${tinh}"></option>
             </select>
         </div>
         <div class="header_input_form">
             <label for="start_date">Ngày xuất phát</label>
-            <input type="text" id="start_date" class="form-control datepicker" placeholder="MM/DD/YYYY" readonly>
+            <input type="date" id="start_date" class="form-control datepicker" placeholder="MM/DD/YYYY">
         </div>
         <div class="header_input_button">
             <button class="btn button_input" type="button">Tìm kiếm vé xe</button>
@@ -68,19 +68,21 @@
             <ul class="filter_menu_list">
                 <li style="margin-right: 100px; font-size: 15px;">Sắp xếp tuyến đường theo:</li>
                 <li class="fml_child">
-                    <a class="fml_child_dropdown" href="">Giờ đi</a><span class="caret"></span>
-                    <div class="fml_child_dropdown_content">
-                        <a href="">Tăng dần</a>
-                        <br>
-                        <a href="">Giảm dần</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Giờ Xuất Phát</button>
+                        <div class="dropdown-content">
+                            <a href="#">Tăng Dần</a>
+                            <a href="#">Giảm Dần</a>
+                        </div>
                     </div>
                 </li>
                 <li class="fml_child">
-                    <a class="fml_child_dropdown" href="">Đánh giá</a><span class="caret"></span>
-                    <div class="fml_child_dropdown_content">
-                        <a href="">Tăng dần</a>
-                        <br>
-                        <a href="">Giảm dần</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Đánh Giá</button>
+                        <div class="dropdown-content">
+                            <a href="#">Tăng Dần</a>
+                            <a href="#">Giảm Dần</a>
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -124,12 +126,12 @@
                         <div class="orderseat-content">
                             <div class="ods_intrs">
                                 <div class="color float_left" style="display: block;
-                                    background: #dddddd;
+                                background: #F42536;
                                     width: 15px; height: 15px; border: 1px solid rgb(145, 145, 145);">
                                 </div>
                                 <div class="idsch float_left">Không chọn</div>
                                 <div class="color float_left" style="display: block;
-                                background: #F42536;
+                                background: #dddddd;
                                 width: 15px; height: 15px; border: 1px solid rgb(145, 145, 145);">
                                 </div>
                                 <div class="idsch float_left">Ghế trống</div>
@@ -141,7 +143,7 @@
                             </div>
                             <div class="icon_exit clear">
                                 <label>
-                                    <select>
+                                    <select id="book_ticket_floors" hidden>
                                         <option value="tang_1">Tầng 1</option>
                                         <option value="tang_2">Tầng 2</option>
                                     </select>
@@ -149,179 +151,179 @@
                             </div>
                             <div class="plane">
                                 <ol class="cabin fuselage">
-                                    <li class="row">
+                                    <li class="row" id="row_list_ghe">
                                         <ol class="seats" type="A">
-                                            <li class="seat">
-                                                <input type="checkbox" id="A1"/>
-                                                <label for="A1">A1</label>
+                                            <li class='seat' id='G1'>
+                                                <input type='checkbox' id='X1'/>
+                                                <label for='X1'>X1</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A2"/>
-                                                <label for="A2">A2</label>
+                                            <li class="seat" id="G2">
+                                                <input type="checkbox" id="X2"/>
+                                                <label for="X2">X2</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A3"/>
-                                                <label for="A3">A3</label>
+                                            <li class="seat" id="G3">
+                                                <input type="checkbox" id="X3"/>
+                                                <label for="X3">X3</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A4"/>
-                                                <label for="A4">A4</label>
+                                            <li class="seat" id="G4">
+                                                <input type="checkbox" id="X4"/>
+                                                <label for="X4">X4</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A5"/>
-                                                <label for="A5">A5</label>
+                                            <li class="seat" id="G5">
+                                                <input type="checkbox" id="X5"/>
+                                                <label for="X5">X5</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A6"/>
-                                                <label for="A6">A6</label>
+                                            <li class="seat" id="G6">
+                                                <input type="checkbox" id="X6"/>
+                                                <label for="X6">X6</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A7"/>
-                                                <label for="A7">A7</label>
+                                            <li class="seat" id="G7">
+                                                <input type="checkbox" id="X7"/>
+                                                <label for="X7">X7</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A8"/>
-                                                <label for="A8">A8</label>
+                                            <li class="seat" id="G8">
+                                                <input type="checkbox" id="X8"/>
+                                                <label for="X8">X8</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A9"/>
-                                                <label for="A9">A9</label>
+                                            <li class="seat" id="G9">
+                                                <input type="checkbox" id="X9"/>
+                                                <label for="X9">X9</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A10"/>
-                                                <label for="A10">A10</label>
+                                            <li class="seat" id="G10">
+                                                <input type="checkbox" id="X10"/>
+                                                <label for="X10">X10</label>
                                             </li>
                                         </ol>
                                     </li>
                                     <li class="row">
                                         <ol class="seats" type="A">
-                                            <li class="seat">
-                                                <input type="checkbox" id="A11"/>
-                                                <label for="A11">A11</label>
+                                            <li class="seat" id="G11">
+                                                <input type="checkbox" id="X11"/>
+                                                <label for="X11">X11</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A12"/>
-                                                <label for="A12">A12</label>
+                                            <li class="seat" id="G12">
+                                                <input type="checkbox" id="X12"/>
+                                                <label for="X12">X12</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A13"/>
-                                                <label for="A13">A13</label>
+                                            <li class="seat" id="G13">
+                                                <input type="checkbox" id="X13"/>
+                                                <label for="X13">X13</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A14"/>
-                                                <label for="A14">A14</label>
+                                            <li class="seat" id="G14">
+                                                <input type="checkbox" id="X14"/>
+                                                <label for="X14">X14</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A15"/>
-                                                <label for="A15">A15</label>
+                                            <li class="seat" id="G15">
+                                                <input type="checkbox" id="X15"/>
+                                                <label for="X15">X15</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A16"/>
-                                                <label for="A16">A16</label>
+                                            <li class="seat" id="G16">
+                                                <input type="checkbox" id="X16"/>
+                                                <label for="X16">X16</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A17"/>
-                                                <label for="A17">A17</label>
+                                            <li class="seat" id="G17">
+                                                <input type="checkbox" id="X17"/>
+                                                <label for="X17">X17</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A18"/>
-                                                <label for="A18">A18</label>
+                                            <li class="seat" id="G18">
+                                                <input type="checkbox" id="X18"/>
+                                                <label for="X18">X18</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A19"/>
-                                                <label for="A19">A19</label>
+                                            <li class="seat" id="G19">
+                                                <input type="checkbox" id="X19"/>
+                                                <label for="X19">X19</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A20"/>
-                                                <label for="A4">A4</label>
-                                            </li>
-                                        </ol>
-                                    </li>
-                                    <li class="row">
-                                        <ol class="seats" type="A">
-                                            <li class="seat">
-                                                <input type="checkbox" id="A21"/>
-                                                <label for="A21">A21</label>
-                                            </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A22"/>
-                                                <label for="A22">A22</label>
-                                            </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A23"/>
-                                                <label for="A23">A23</label>
-                                            </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A24"/>
-                                                <label for="A24">A24</label>
-                                            </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A25"/>
-                                                <label for="A25">A25</label>
-                                            </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A26"/>
-                                                <label for="A26">A26</label>
-                                            </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A27"/>
-                                                <label for="A27">A27</label>
-                                            </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A28"/>
-                                                <label for="A28">A28</label>
-                                            </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A29"/>
-                                                <label for="A29">A29</label>
-                                            </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A30"/>
-                                                <label for="A30">A30</label>
+                                            <li class="seat" id="G20">
+                                                <input type="checkbox" id="X20"/>
+                                                <label for="X20">X20</label>
                                             </li>
                                         </ol>
                                     </li>
                                     <li class="row">
                                         <ol class="seats" type="A">
-                                            <li class="seat">
-                                                <input type="checkbox" id="A31"/>
-                                                <label for="A31">A31</label>
+                                            <li class="seat" id="G21">
+                                                <input type="checkbox" id="X21"/>
+                                                <label for="X21">X21</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A32"/>
-                                                <label for="A32">A32</label>
+                                            <li class="seat" id="G22">
+                                                <input type="checkbox" id="X22"/>
+                                                <label for="X22">X22</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A33"/>
-                                                <label for="A33">A33</label>
+                                            <li class="seat" id="G23">
+                                                <input type="checkbox" id="X23"/>
+                                                <label for="X23">X23</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A34"/>
-                                                <label for="A34">A34</label>
+                                            <li class="seat" id="G24">
+                                                <input type="checkbox" id="X24"/>
+                                                <label for="X24">X24</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A35"/>
-                                                <label for="A35">A35</label>
+                                            <li class="seat" id="G25">
+                                                <input type="checkbox" id="X25"/>
+                                                <label for="X25">X25</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A36"/>
-                                                <label for="A36">A36</label>
+                                            <li class="seat" id="G26">
+                                                <input type="checkbox" id="X26"/>
+                                                <label for="X26">X26</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A37"/>
-                                                <label for="A37">A37</label>
+                                            <li class="seat" id="G27">
+                                                <input type="checkbox" id="X27"/>
+                                                <label for="X27">X27</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A38"/>
-                                                <label for="A38">A38</label>
+                                            <li class="seat" id="G28">
+                                                <input type="checkbox" id="X28"/>
+                                                <label for="X28">X28</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A39"/>
-                                                <label for="A39">A39</label>
+                                            <li class="seat" id="G29">
+                                                <input type="checkbox" id="X29"/>
+                                                <label for="X29">X29</label>
                                             </li>
-                                            <li class="seat">
-                                                <input type="checkbox" id="A40"/>
-                                                <label for="A40">A40</label>
+                                            <li class="seat" id="G30">
+                                                <input type="checkbox" id="X30"/>
+                                                <label for="X30">X30</label>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li class="row">
+                                        <ol class="seats" type="A">
+                                            <li class="seat" id="G31">
+                                                <input type="checkbox" id="X31"/>
+                                                <label for="X31">X31</label>
+                                            </li>
+                                            <li class="seat" id="G32">
+                                                <input type="checkbox" id="X32"/>
+                                                <label for="X32">X32</label>
+                                            </li>
+                                            <li class="seat" id="G33">
+                                                <input type="checkbox" id="X33"/>
+                                                <label for="X33">X33</label>
+                                            </li>
+                                            <li class="seat" id="G34">
+                                                <input type="checkbox" id="X34"/>
+                                                <label for="X34">X34</label>
+                                            </li>
+                                            <li class="seat" id="G35">
+                                                <input type="checkbox" id="X35"/>
+                                                <label for="X35">X35</label>
+                                            </li>
+                                            <li class="seat" id="G36">
+                                                <input type="checkbox" id="X36"/>
+                                                <label for="X36">X36</label>
+                                            </li>
+                                            <li class="seat" id="G37">
+                                                <input type="checkbox" id="X37"/>
+                                                <label for="X37">X37</label>
+                                            </li>
+                                            <li class="seat" id="G38">
+                                                <input type="checkbox" id="X38"/>
+                                                <label for="X38">X38</label>
+                                            </li>
+                                            <li class="seat" id="G39">
+                                                <input type="checkbox" id="X39"/>
+                                                <label for="X39">X39</label>
+                                            </li>
+                                            <li class="seat" id="G40">
+                                                <input type="checkbox" id="X40"/>
+                                                <label for="X40">X40</label>
                                             </li>
                                         </ol>
                                     </li>
@@ -329,21 +331,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="right-popup-content">
+                    <div class="right-popup-content" id="right_div">
                         <div class="form_custom_popup" id="book_ticket_form_login">
-                            <form action="/thanh-toan" method="POST" role="form" id="form_submit">
-                                <div class="form-group">
-                                    <label for="real_name">Tài Khoản</label>
-                                    <input type="text" class="form-control" id="real_name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Mật Khẩu</label>
-                                    <input type="password" class="form-control" id="phone">
-                                </div>
-                                <button class="btn btn-primary" data-dismiss="modal">Đăng Nhập</button>
-                            </form>
-                            <button type="submit" class="btn btn-primary" id="btn_payment" style="float: right">Tiếp
-                                tục
+                            <div class="form-group">
+                                <label for="username">Tài Khoản</label>
+                                <input type="text" class="form-control" id="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Mật Khẩu</label>
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                            <button class="btn btn-primary" id="confirm_login">Đăng Nhập</button>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary" id="btn_payment" style="float: right" hidden>Thanh
+                                Toán
                             </button>
                         </div>
                     </div>

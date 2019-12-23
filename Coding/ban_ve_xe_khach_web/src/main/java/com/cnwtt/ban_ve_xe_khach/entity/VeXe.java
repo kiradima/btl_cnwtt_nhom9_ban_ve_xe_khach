@@ -13,9 +13,13 @@ public class VeXe {
     @Column(name = "id_chuyen_xe")
     private int idChuyenXe;
 
-    public VeXe(String viTriGhe, int idChuyenXe) {
+    public VeXe(int id, String viTriGhe, int idChuyenXe) {
+        this.id = id;
         this.viTriGhe = viTriGhe;
         this.idChuyenXe = idChuyenXe;
+    }
+
+    public VeXe() {
     }
 
     public int getId() {

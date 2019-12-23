@@ -21,16 +21,19 @@ import java.util.List;
 public class MainController {
     private static Logger LOGGER = LoggerFactory.getLogger(UserResource.class);
 
-    @Autowired
-    private ViTriService viTriService;
-    @Autowired
-    private NhaXeService nhaXeService;
-    @Autowired
-    private ChuyenXeService chuyenXeService;
+    private final ViTriService viTriService;
+    private final NhaXeService nhaXeService;
+    private final ChuyenXeService chuyenXeService;
+
+    public MainController(ViTriService viTriService, NhaXeService nhaXeService, ChuyenXeService chuyenXeService) {
+        this.viTriService = viTriService;
+        this.nhaXeService = nhaXeService;
+        this.chuyenXeService = chuyenXeService;
+    }
 
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("viTris", viTriService.findAll());
+        model.addAttribute("tinhs", viTriService.getAllTinhs());
         return "trangdautien";
     }
 
@@ -46,7 +49,7 @@ public class MainController {
 
     @GetMapping("/trang-chu")
     public String trangChu(Model model) {
-        model.addAttribute("viTris", viTriService.findAll());
+        model.addAttribute("tinhs", viTriService.getAllTinhs());
         model.addAttribute("nhaXes", nhaXeService.findAllNhaXe());
         return "trangchu";
     }

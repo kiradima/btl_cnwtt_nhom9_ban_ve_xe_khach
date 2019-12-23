@@ -3,7 +3,10 @@ package com.cnwtt.ban_ve_xe_khach.api.resource;
 import com.cnwtt.ban_ve_xe_khach.api.Response;
 import com.cnwtt.ban_ve_xe_khach.api.response.trangchu.GetDetailChuyenXeResponse;
 import com.cnwtt.ban_ve_xe_khach.entity.OrderDetail;
+import com.cnwtt.ban_ve_xe_khach.entity.VeXe;
+import com.cnwtt.ban_ve_xe_khach.entity.ViTriChuyenXe;
 import com.cnwtt.ban_ve_xe_khach.service.OrderDetailService;
+import com.cnwtt.ban_ve_xe_khach.service.VeXeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,9 +24,12 @@ public class TrangChuResource {
 
     final
     OrderDetailService orderDetailService;
+    final
+    VeXeService veXeService;
 
-    public TrangChuResource(OrderDetailService orderDetailService) {
+    public TrangChuResource(OrderDetailService orderDetailService, VeXeService veXeService) {
         this.orderDetailService = orderDetailService;
+        this.veXeService = veXeService;
     }
 
     @GetMapping("/get/orders")
@@ -32,16 +38,13 @@ public class TrangChuResource {
         String message = "Success";
         boolean isTwoFloors = false;
         List<String> listViTriGheOrdered = orderDetailService.getListViTriGheOrderedByIdChuyenXe(idChuyenXe);
-        for (String viTriGhe : listViTriGheOrdered) {
-            if (viTriGhe.contains("B")) {
+        List<VeXe> veXes = veXeService.getVeXesByIdChuyenXe(idChuyenXe);
+        for (VeXe veXe : veXes) {
+            if (veXe.getViTriGhe().contains("B")) {
                 isTwoFloors = true;
                 break;
             }
         }
-        if (listViTriGheOrdered == null) {
-            code = 400;
-            message = "Failed";
-        }
-        return ResponseEntity.ok(new Response(code, message, new GetDetailChuyenXeResponse(listViTriGheOrdered, isTwoFloors)));
+        return ResponseEntity.ok(new Response(code, message, new GetDetailChuyenXeResponse(listViTriGheOrdered, isTwoFloors, veXes)));
     }
 }

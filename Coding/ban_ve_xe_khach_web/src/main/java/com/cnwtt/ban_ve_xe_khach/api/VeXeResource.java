@@ -28,7 +28,7 @@ public class VeXeResource {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<VeXe> get(@PathVariable("id") Long id) {
+    public ResponseEntity<VeXe> get(@PathVariable("id") int id) {
         LOGGER.info("Call api get vexe: id[{}]", id);
         return ResponseEntity.ok(service.findById(id));
     }
@@ -40,15 +40,15 @@ public class VeXeResource {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable("id") Long id) {
+    public void delete(@PathVariable("id") int id) {
         LOGGER.info("Call api delete vexe : id [{}]", id);
         service.delete(id);
     }
 
     @GetMapping("/list")
     public Page<VeXe> list(@RequestParam(value = "page", defaultValue = "1") int page,
-                               @RequestParam(value = "size", defaultValue = "20") int size,
-                               @RequestParam(value = "sort_by", defaultValue = "id") String sortField) {
+                           @RequestParam(value = "size", defaultValue = "20") int size,
+                           @RequestParam(value = "sort_by", defaultValue = "id") String sortField) {
         LOGGER.info("Call api list vexe");
         return service.getLists(PageRequest.of(page - 1, size, Sort.by(sortField)));
     }
