@@ -57,59 +57,6 @@ $(document).ready(function () {
         localStorage.removeItem("user");
         window.location.reload();
     });
-    $(document).on("click", "#btn_payment", function (e) {
-        e.preventDefault();
-        if (user == null) {
-            // window.location.href = "/login";
-        } else {
-            window.location.href = "/thanh-toan";
-            window.location.href = "/thanh-toan?realName=" + user.realName + "&phone=" + phone
-        }
-        // let user = {
-        //     "id": $('#id').val(),
-        //     "email": "dsjjkjksfj",
-        //     "password": "1234561234",
-        //     "realName": $('#real_name').val(),
-        //     "phone": $('#phone').val(),
-        //     "role": 1,
-        // };
-        //
-        // $.ajax({
-        //     url: "/api/v1/user/create",
-        //     type: 'POST',
-        //     contentType: "application/json; charset=utf-8",
-        //     data: JSON.stringify(user),
-        //     error: function () {
-        //         // window.component.alert.show("error", "Error", 2000);
-        //         console.log("ERROR");
-        //     },
-        //     success: function (data) {
-        //         console.log(data);
-        //         let realName = data.realName;
-        //         let phone = data.phone;
-        //         // $("#form_submit").submit();
-        //
-        //         // $.ajax({
-        //         //     url: "/api/v1/user/" + data.id,
-        //         //     type: 'GET',
-        //         //     contentType: "application/json; charset=utf-8",
-        //         //     error: function () {
-        //         //         // window.component.alert.show("error", "Error", 2000);
-        //         //         console.log("ERROR");
-        //         //     },
-        //         //     success: function (data) {
-        //         //         console.log("PaymentData",data);
-        //         //         $('#id_payment').val(data.id);
-        //         //         $('#real_name_payment').val(data.realName);
-        //         //         $('#phone_payment').val(data.phone);
-        //         //     }
-        //         // });
-        //         window.location.href = "/thanh-toan?realName=" + realName + "&phone=" + phone;
-        //
-        //
-        //     }
-        // });
-    });
 });
 $(document).on("click", "#confirm_login", function (e) {
     var email = $("#email").val();
@@ -152,16 +99,9 @@ $(document).on("click", "#confirm_login", function (e) {
     });
 });
 
-// var loginForm = $('#book_ticket_form_login');
 $(document).on("click", "#chuyen_xes_collection", function (e) {
     let bookTicket = (e.target.className === "btn btn-primary");
     if (bookTicket) {
-        // if (user == null) {
-        //     loginForm.appendTo("right_div");
-        //     loginForm = null;
-        // } else {
-        //     loginForm = $("p").detach();
-        // }
         if (user == null) {
             $('#book_ticket_form_login').show();
             $('#btn_payment').hide();
@@ -182,6 +122,21 @@ $(document).on("click", "#chuyen_xes_collection", function (e) {
             data: {idChuyenXe: dataSearch[i - 1].chuyenXe.id},
             success: function (response) {
                 console.log(response);
+                var listGheChecked = [];
+                $(document).on("click", "#btn_payment", function (e) {
+                    e.preventDefault();
+                    var bookTicketInfo = {
+                        dataId: i - 1,
+                        dataOrdered: response.data,
+                        listGheChecked: listGheChecked,
+                        giaVe: dataSearch[i - 1].chuyenXe.mucGia
+                    };
+                    sessionStorage.setItem("bookTicketInfo", JSON.stringify(bookTicketInfo));
+                    if (user != null) {
+                        window.location.href = "/thanh-toan";
+                        window.location.href = "/thanh-toan?realName=" + user.realName + "&phone=" + phone
+                    }
+                });
                 if (response.data.twoFloors) {
                     $('#book_ticket_floors').show();
                     var a = document.getElementById('book_ticket_floors');
@@ -193,7 +148,25 @@ $(document).on("click", "#chuyen_xes_collection", function (e) {
                                     var idLiBoundCheckbox = '#G' + veXe.viTriGhe.substring(1);
                                     $(idLiBoundCheckbox).show();
                                     var idCheckbox = '#X' + veXe.viTriGhe.substring(1);
+                                    $(idCheckbox).off();
                                     $(idCheckbox).removeAttr("disabled");
+                                    $(idCheckbox).prop("checked", false);
+                                    if (listGheChecked.includes(veXe.viTriGhe)) {
+                                        $(idCheckbox).prop("checked", true);
+                                    }
+                                    $(idCheckbox).change(function () {
+                                        if ($(this).is(':checked')) {
+                                            listGheChecked.push(veXe.viTriGhe);
+                                        } else {
+                                            for (var i = 0; i < listGheChecked.length; i++) {
+                                                if (listGheChecked[i] === veXe.viTriGhe) {
+                                                    listGheChecked.splice(i, 1);
+                                                    i--;
+                                                }
+                                            }
+                                        }
+                                        console.log(listGheChecked);
+                                    });
                                 }
                             });
 
@@ -207,10 +180,29 @@ $(document).on("click", "#chuyen_xes_collection", function (e) {
                         if (this.value === 'tang_2') {
                             response.data.veXes.forEach(function (veXe) {
                                 if (veXe.viTriGhe.includes('B')) {
+
                                     var idLiBoundCheckbox = '#G' + veXe.viTriGhe.substring(1);
                                     $(idLiBoundCheckbox).show();
                                     var idCheckbox = '#X' + veXe.viTriGhe.substring(1);
+                                    $(idCheckbox).off();
                                     $(idCheckbox).removeAttr("disabled");
+                                    $(idCheckbox).prop("checked", false);
+                                    if (listGheChecked.includes(veXe.viTriGhe)) {
+                                        $(idCheckbox).prop("checked", true);
+                                    }
+                                    $(idCheckbox).change(function () {
+                                        if ($(this).is(':checked')) {
+                                            listGheChecked.push(veXe.viTriGhe);
+                                        } else {
+                                            for (var i = 0; i < listGheChecked.length; i++) {
+                                                if (listGheChecked[i] === veXe.viTriGhe) {
+                                                    listGheChecked.splice(i, 1);
+                                                    i--;
+                                                }
+                                            }
+                                        }
+                                        console.log(listGheChecked);
+                                    });
                                 }
                             });
 
@@ -224,12 +216,31 @@ $(document).on("click", "#chuyen_xes_collection", function (e) {
                     }, false)
                 }
                 $('.seat').hide();
+                listGheChecked = [];
                 response.data.veXes.forEach(function (veXe) {
                     if (veXe.viTriGhe.includes('A')) {
                         var idLiBoundCheckbox = '#G' + veXe.viTriGhe.substring(1);
                         $(idLiBoundCheckbox).show();
                         var idCheckbox = '#X' + veXe.viTriGhe.substring(1);
+                        $(idCheckbox).off();
                         $(idCheckbox).removeAttr("disabled");
+                        $(idCheckbox).prop("checked", false);
+                        if (listGheChecked.includes(veXe.viTriGhe)) {
+                            $(idCheckbox).prop("checked", true);
+                        }
+                        $(idCheckbox).change(function () {
+                            if ($(this).is(':checked')) {
+                                listGheChecked.push(veXe.viTriGhe);
+                            } else {
+                                for (var i = 0; i < listGheChecked.length; i++) {
+                                    if (listGheChecked[i] === veXe.viTriGhe) {
+                                        listGheChecked.splice(i, 1);
+                                        i--;
+                                    }
+                                }
+                            }
+                            console.log(listGheChecked);
+                        });
                     }
                 });
 
