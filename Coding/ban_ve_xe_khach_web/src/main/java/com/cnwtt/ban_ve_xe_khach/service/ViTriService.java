@@ -22,48 +22,21 @@ public class ViTriService {
         return repository.findAll(pageable);
     }
 
-    public List<ViTri> findAll(){
-        return repository.findAll();
+    public List<String> getAllTinhs(){
+        return repository.getAllTinhs();
     }
 
-    /**
-     * Create
-     *
-     * @param entity
-     * @return
-     */
     public ViTri create(ViTri entity) {
         return repository.save(entity);
     }
-
-    /**
-     * Read
-     *
-     * @param id
-     * @return
-     */
 
     public ViTri findById(Long id) {
         return repository.findById(id).get();
     }
 
-    /**
-     * Update
-     *
-     * @param entity
-     * @return
-     */
-
     public ViTri update(ViTri entity){
         return repository.save(entity);
     }
-
-    /**
-     * Delete
-     *
-     * @param id
-     * @return
-     */
 
     public void delete(Long id){
         ViTri entity = findById(id);

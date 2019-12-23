@@ -24,48 +24,25 @@ public class ViTriChuyenXeService {
         return repository.findAll();
     }
 
-    /**
-     * Create
-     *
-     * @param entity
-     * @return
-     */
     public ViTriChuyenXe create(ViTriChuyenXe entity) {
         return repository.save(entity);
     }
-
-    /**
-     * Read
-     *
-     * @param id
-     * @return
-     */
 
     public ViTriChuyenXe findById(Long id) {
         return repository.findById(id).get();
     }
 
-    /**
-     * Update
-     *
-     * @param entity
-     * @return
-     */
-
     public ViTriChuyenXe update(ViTriChuyenXe entity) {
         return repository.save(entity);
     }
 
-    /**
-     * Delete
-     *
-     * @param id
-     * @return
-     */
-
     public void delete(Long id) {
         ViTriChuyenXe entity = findById(id);
         repository.delete(entity);
+    }
+
+    public List<ViTriChuyenXe> findByIdChuyenXeAndType(int idChuyenXe, int type) {
+        return repository.findByIdChuyenXeAndType(idChuyenXe, type);
     }
 
 }

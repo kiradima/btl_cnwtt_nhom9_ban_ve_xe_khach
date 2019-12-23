@@ -23,48 +23,26 @@ public class ChuyenXeService {
         return repository.findAll();
     }
 
-    /**
-     * Create
-     *
-     * @param entity
-     * @return
-     */
     public ChuyenXe create(ChuyenXe entity) {
         return repository.save(entity);
     }
-
-    /**
-     * Read
-     *
-     * @param id
-     * @return
-     */
 
     public ChuyenXe findById(Long id) {
         return repository.findById(id).get();
     }
 
-    /**
-     * Update
-     *
-     * @param entity
-     * @return
-     */
-
-    public ChuyenXe update(ChuyenXe entity){
+    public ChuyenXe update(ChuyenXe entity) {
         return repository.save(entity);
     }
 
-    /**
-     * Delete
-     *
-     * @param id
-     * @return
-     */
-
-    public void delete(Long id){
+    public void delete(Long id) {
         ChuyenXe entity = findById(id);
         repository.delete(entity);
     }
 
+    public List<ChuyenXe> search(String diemXuatPhat,
+                                 String diemDung,
+                                 String ngayXuatPhat) {
+        return repository.search(diemXuatPhat, diemDung, ngayXuatPhat);
+    }
 }

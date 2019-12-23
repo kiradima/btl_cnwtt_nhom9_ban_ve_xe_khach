@@ -1,6 +1,5 @@
 package com.cnwtt.ban_ve_xe_khach.api;
 
-import com.cnwtt.ban_ve_xe_khach.entity.Login;
 import com.cnwtt.ban_ve_xe_khach.entity.User;
 import com.cnwtt.ban_ve_xe_khach.service.UserService;
 import org.slf4j.Logger;
@@ -19,19 +18,6 @@ public class UserResource {
 
     @Autowired
     private UserService service;
-
-    @RequestMapping(value = "/login", produces = "application/json", method = RequestMethod.POST)
-    public @ResponseBody
-    ResponseEntity<User> login(@ModelAttribute Login login) {
-        LOGGER.info("Call api login");
-        return ResponseEntity.ok(service.login(login.getUsername(), login.getPassword()));
-    }
-//    @PostMapping(value = "/login")
-//    @ResponseBody
-//    public ResponseEntity<User> login(@RequestBody Login login) {
-//        LOGGER.info("Call api login");
-//        return ResponseEntity.ok(service.login(login.getUsername(), login.getPassword()));
-//    }
 
     @PostMapping("/create")
     public ResponseEntity<User> save(@RequestBody User entity) {
@@ -64,6 +50,4 @@ public class UserResource {
         LOGGER.info("Call api list user");
         return service.getLists(PageRequest.of(page - 1, size, Sort.by(sortField)));
     }
-
-
 }

@@ -26,7 +26,7 @@ public class NhaXeResource {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<NhaXe> get(@PathVariable("id") Long id) {
+    public ResponseEntity<NhaXe> get(@PathVariable("id") int id) {
         LOGGER.info("Call api get nhaxe: id[{}]", id);
         return ResponseEntity.ok(service.findById(id));
     }
@@ -38,7 +38,7 @@ public class NhaXeResource {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void delete(@PathVariable("id") Long id) {
+    public void delete(@PathVariable("id") int id) {
         LOGGER.info("Call api delete nhaxe : id [{}]", id);
         service.delete(id);
     }

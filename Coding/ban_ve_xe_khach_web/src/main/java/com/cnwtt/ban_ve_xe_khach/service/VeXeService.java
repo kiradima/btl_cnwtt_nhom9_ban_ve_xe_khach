@@ -24,48 +24,25 @@ public class VeXeService {
         return repository.findAll();
     }
 
-    /**
-     * Create
-     *
-     * @param entity
-     * @return
-     */
     public VeXe create(VeXe entity) {
         return repository.save(entity);
     }
 
-    /**
-     * Read
-     *
-     * @param id
-     * @return
-     */
-
-    public VeXe findById(Long id) {
-        return repository.findById(id).get();
+    public VeXe findById(int id) {
+        return repository.findById(id);
     }
 
-    /**
-     * Update
-     *
-     * @param entity
-     * @return
-     */
-
-    public VeXe update(VeXe entity){
+    public VeXe update(VeXe entity) {
         return repository.save(entity);
     }
 
-    /**
-     * Delete
-     *
-     * @param id
-     * @return
-     */
-
-    public void delete(Long id){
+    public void delete(int id) {
         VeXe entity = findById(id);
         repository.delete(entity);
+    }
+
+    public List<VeXe> getVeXesByIdChuyenXe(int idChuyenXe) {
+        return repository.findByIdChuyenXe(idChuyenXe);
     }
 
 }

@@ -24,46 +24,19 @@ public class NhaXeService {
         return repository.findAll();
     }
 
-    /**
-     * Create
-     *
-     * @param entity
-     * @return
-     */
     public NhaXe create(NhaXe entity) {
         return repository.save(entity);
     }
 
-    /**
-     * Read
-     *
-     * @param id
-     * @return
-     */
-
-    public NhaXe findById(Long id) {
-        return repository.findById(id).get();
+    public NhaXe findById(int id) {
+        return repository.findById((long) id).get();
     }
 
-    /**
-     * Update
-     *
-     * @param entity
-     * @return
-     */
-
-    public NhaXe update(NhaXe entity){
+    public NhaXe update(NhaXe entity) {
         return repository.save(entity);
     }
 
-    /**
-     * Delete
-     *
-     * @param id
-     * @return
-     */
-
-    public void delete(Long id){
+    public void delete(int id) {
         NhaXe entity = findById(id);
         repository.delete(entity);
     }
