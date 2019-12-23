@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -8,34 +8,33 @@
     <link rel="stylesheet" href="libs/assets/css/Login-Form-Clean.css">
     <link rel="stylesheet" href="libs/assets/css/styles.css">
     <script src="/libs/jquery/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="/custom/js/loginRequest.js"></script>
+    <script type="text/javascript" src="/libs/bootstrap/bootstrap.4.1.0.min.js"></script>
+    <script type="text/javascript" src="/custom/js/layouts/common_component.js"></script>
+    <script type="text/javascript" src="/custom/js/login.js"></script>
 </head>
-
 <body>
-<div class="loginRequest-clean">
+<div class="login-clean">
+    <h2 class="sr-only">Đăng Nhập</h2>
+    <div class="illustration">
+        <img src="libs/assets/img/LOGO.png">
+    </div>
     <form>
-        <h2 class="sr-only">Login Form</h2>
-        <div class="illustration">
-            <img src="libs/assets/img/LOGO.png">
+        <div class="form-group">
+            <input class="border rounded border-primary form-control" type="email" name="email" id="email"
+                   placeholder="Email">
         </div>
         <div class="form-group">
-            <input class="border rounded border-primary form-control" type="email" name="email" placeholder="Email"
-                   id="email">
+            <input class="border rounded border-primary form-control" type="password" id="password" name="password"
+                   placeholder="Mật Khẩu">
         </div>
         <div class="form-group">
-            <input class="border rounded border-primary form-control" type="password" name="password"
-                   placeholder="Password" id="password">
-        </div>
-        <div class="form-group">
-            <button class="btn btn-primary btn-block" style="background-color: #265a88;"
-                    id="confirm_login">Log In
+            <button class="btn btn-primary btn-block" style="background-color: #265a88;" id="confirm_login">Đăng Nhập
             </button>
         </div>
-        <a href="#" class="forgot">Forgot your email or password?</a>
     </form>
+    <a href="#" class="forgot">Forgot your email or password?</a>
 </div>
 <script src="libs/assets/js/jquery.min.js"></script>
 <script src="libs/assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
-
 </html>

@@ -24,8 +24,8 @@ $(document).ready(function () {
         console.log(password);
 
         $.ajax({
-            type: 'POST',
-            url: "/api/v1/login/",
+            type: 'GET',
+            url: "/api/v1/login/log",
             data: data,
             success: function (response) {
                 console.log(response);
