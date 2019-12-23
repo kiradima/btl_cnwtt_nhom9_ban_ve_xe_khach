@@ -21,13 +21,17 @@
     <script type="text/javascript" src="/custom/js/layouts/common_component.js"></script>
     <script type="text/javascript" src="/libs/jquery-ui/jquery-ui.1.12.1.min.js"></script>
     <script type="text/javascript" src="/custom/js/trang_chu.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container">
     <div class="header">
         <div class="logo_header">
             <a href="/trang-chu">
-                <img class="logoheader" src="/static/images/logo.svg" alt="">
+                <img type="images" class="img-responsive" src="/images/logo.jpg" alt="" style="">
             </a>
         </div>
         <div class="menu_header">
@@ -43,8 +47,9 @@
     </div>
     <div class="header_input">
         <div class="header_input_form">
-            <label for="start_location">Điểm xuất phát</label>
+<!--            <label for="start_location">Điểm xuất phát</label>-->
             <select name="" id="start_location" class="form-control" required="required">
+                <option value="" selected>Chọn điểm xuất phát</option>
                 <option th:each="tinh:${tinhs}" th:value="${tinh}" th:text="${tinh}"></option>
             </select>
         </div>
@@ -52,35 +57,36 @@
             <span style="font-size: 20px;" class="glyphicon glyphicon-arrow-right"></span>
         </div>
         <div class="header_input_form">
-            <label for="end_location">Điểm kết thúc</label>
+<!--            <label for="end_location">Điểm kết thúc</label>-->
             <select name="" id="end_location" class="form-control" required="required">
+                <option value="" selected>Chọn điểm đến</option>
                 <option th:each="tinh:${tinhs}" th:value="${tinh}" th:text="${tinh}"></option>
             </select>
         </div>
         <div class="header_input_form">
-            <label for="start_date">Ngày xuất phát</label>
-            <input type="date" id="start_date" class="form-control datepicker" placeholder="MM/DD/YYYY">
+<!--            <label for="start_date">Ngày xuất phát</label>-->
+            <input type="date" id="start_date" class="form-control datepicker" placeholder="Chọn ngày">
         </div>
         <div class="header_input_button">
-            <button class="btn button_input" type="button">Tìm kiếm vé xe</button>
+            <button class="btn button_input float_right" type="button">Tìm kiếm vé xe</button>
         </div>
     </div>
     <div class="filter_header">
         <div class="filter_menu">
             <ul class="filter_menu_list">
-                <li style="margin-right: 100px; font-size: 15px;">Sắp xếp tuyến đường theo:</li>
-                <li class="fml_child">
+                <li style="font-size: 15px; padding-right: 15px">Sắp xếp tuyến đường theo:</li>
+                <li class="fml_child" style="bottom: 8px">
                     <div class="dropdown">
-                        <button class="dropbtn">Giờ Xuất Phát</button>
+                        <button class="dropbtn btn-primary" style="height: 30px;">Giờ Xuất Phát</button>
                         <div class="dropdown-content">
                             <a href="#">Tăng Dần</a>
                             <a href="#">Giảm Dần</a>
                         </div>
                     </div>
                 </li>
-                <li class="fml_child">
+                <li class="fml_child" style="bottom: 8px">
                     <div class="dropdown">
-                        <button class="dropbtn">Đánh Giá</button>
+                        <button class="dropbtn btn-primary" style="height: 30px;">Đánh Giá</button>
                         <div class="dropdown-content">
                             <a href="#">Tăng Dần</a>
                             <a href="#">Giảm Dần</a>
@@ -91,7 +97,7 @@
         </div>
     </div>
 
-    <div class="main_content">
+    <div class="main_content" style="min-height: 500px">
         <table class="table table-hover">
             <thead>
             <tr>

@@ -13,6 +13,7 @@
     <script type="text/javascript" src="/libs/bootstrap/bootstrap.4.1.0.min.js"></script>
     <script type="text/javascript" src="/custom/js/layouts/common_component.js"></script>
     <script type="text/javascript" src="/custom/js/trangdautien.js"></script>
+
 </head>
 <body style="
         background: url(images/images.jpg) no-repeat;
@@ -20,36 +21,32 @@
 <div class="container containerCustom">
     <div class="row" style="padding-top: 300px;">
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <div class="form-group">
+            <div class="form-group" style="width: 90%">
                 <label for="diem_xuat_phat">Điểm xuất phát</label>
                 <select name="" id="diem_xuat_phat" class="form-control" required="required">
+                    <option value="" selected>Chọn điểm xuất phát</option>
                     <option th:each="tinh:${tinhs}" th:value="${tinh}" th:text="${tinh}"></option>
                 </select>
             </div>
         </div>
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <div class="form-group">
+            <div class="form-group" style="width: 90%">
                 <label for="diem_dung">Điểm đến</label>
                 <select name="" id="diem_dung" class="form-control" required="required">
+                    <option value="" selected>Chọn điểm đến</option>
                     <option th:each="tinh:${tinhs}" th:value="${tinh}" th:text="${tinh}"></option>
                 </select>
             </div>
         </div>
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <div class="form-group">
-                <div class="form-group">
-                    <div class="col-sm-10">
-                        <label for="ngay_xuat_phat">Ngày xuất phát</label>
-                        <input type="date" name="" id="ngay_xuat_phat" class="form-control" required="required">
-                    </div>
-                </div>
+            <div class="form-group" style="width: 90%">
+                <label for="ngay_xuat_phat">Ngày xuất phát</label>
+                <input type="date" name="" id="ngay_xuat_phat" class="form-control" required="required" placeholder="dd/mm/yyyy">
             </div>
         </div>
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <div class="form-group">
-                <div class="col-sm-10 col-sm-offset-2">
-                    <button class="btn btn-primary" id="tim_kiem">Tìm kiếm</button>
-                </div>
+            <div class="form-group" style="padding-top: 20px; text-align: center">
+                <button class="btn btn-primary" id="tim_kiem">Tìm kiếm</button>
             </div>
         </div>
     </div>

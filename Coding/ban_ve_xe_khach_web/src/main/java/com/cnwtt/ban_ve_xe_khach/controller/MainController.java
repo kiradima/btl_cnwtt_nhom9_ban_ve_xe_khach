@@ -36,6 +36,11 @@ public class MainController {
         return "trangdautien";
     }
 
+    @GetMapping("/dang-ky")
+    public String register() {
+        return "register";
+    }
+
     @GetMapping("/login")
     public String login() {
         return "login";
