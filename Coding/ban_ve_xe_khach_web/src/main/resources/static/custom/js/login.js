@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    $('#form_login').submit(function () {
+        return false;
+    });
+
     $('input').on("keypress", function (e) {
         if (e.keyCode === 13) {
             $("#confirm_login").trigger('click');

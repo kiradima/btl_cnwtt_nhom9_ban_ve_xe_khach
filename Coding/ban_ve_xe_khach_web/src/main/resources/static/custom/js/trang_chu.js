@@ -9,12 +9,11 @@ const user = localStorage.getItem("user");
 const dataSearch = JSON.parse(sessionStorage.getItem("dataSearch"));
 $(document).ready(function () {
     //load header and footer
-    $("#header").load("header.html");
-    // $("#footer").load("footer.html");
     //xác nhận đăng nhập
     if (user == null) {
         $('#nav_login').show();
         $('#nav_register').show();
+        $('#logout').hide();
     }
     //load search
     const searchRequest = JSON.parse(sessionStorage.getItem("searchRequest"));
@@ -54,6 +53,10 @@ $(document).ready(function () {
                     </td>`;
         i++;
     });
+    $(document).on("click", "#logout", function (e) {
+        localStorage.removeItem("user");
+        window.location.reload();
+    });
     $(document).on("click", "#btn_payment", function (e) {
         e.preventDefault();
         if (user == null) {
@@ -64,7 +67,7 @@ $(document).ready(function () {
         }
         // let user = {
         //     "id": $('#id').val(),
-        //     "userName": "dsjjkjksfj",
+        //     "email": "dsjjkjksfj",
         //     "password": "1234561234",
         //     "realName": $('#real_name').val(),
         //     "phone": $('#phone').val(),
@@ -109,9 +112,9 @@ $(document).ready(function () {
     });
 });
 $(document).on("click", "#confirm_login", function (e) {
-    var username = $("#username").val();
+    var email = $("#email").val();
     var password = $("#password").val();
-    if (username === null || username === "" || username.trim() === "") {
+    if (email === null || email === "" || email.trim() === "") {
         window.component.alert.show("error", "Please input email", 2000);
         return;
     }
@@ -120,10 +123,10 @@ $(document).on("click", "#confirm_login", function (e) {
         return;
     }
     $.ajax({
-        type: 'POST',
-        url: "/api/v1/user/login",
+        type: 'GET',
+        url: "/api/v1/login/log",
         data: {
-            username: username,
+            email: email,
             password: password
         },
         success: function (response) {
@@ -134,13 +137,14 @@ $(document).on("click", "#confirm_login", function (e) {
                 $('#nav_login').hide();
                 $('#nav_register').hide();
                 $('#btn_payment').show();
+                $('#logout').show();
             } else {
                 alert(response.message)
             }
         },
         error: function (error) {
             console.log(error);
-            window.component.alert.show("error", "Username or password is incorrect!!!", 2000);
+            window.component.alert.show("error", "email or password is incorrect!!!", 2000);
             setTimeout(function () {
                 $("#confirm_login").prop("disabled", false);
             }, 1000)

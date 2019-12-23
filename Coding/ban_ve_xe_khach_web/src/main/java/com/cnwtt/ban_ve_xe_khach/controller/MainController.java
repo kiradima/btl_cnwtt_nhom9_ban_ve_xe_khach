@@ -41,6 +41,11 @@ public class MainController {
         return "login";
     }
 
+    @GetMapping("/register")
+    public String register() {
+        return "register";
+    }
+
     @GetMapping("/history")
     public String history() {
         return "tranglichsu";
