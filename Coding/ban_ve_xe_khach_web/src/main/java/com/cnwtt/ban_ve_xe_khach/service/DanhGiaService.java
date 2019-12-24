@@ -13,8 +13,12 @@ import java.util.List;
 @Service
 public class DanhGiaService {
 
-    @Autowired
-    private DanhGiaRepository repository;
+    final
+    DanhGiaRepository repository;
+
+    public DanhGiaService(DanhGiaRepository repository) {
+        this.repository = repository;
+    }
 
     public Page<DanhGia> getLists(Pageable pageable) {
         return repository.findAll(pageable);

@@ -35,7 +35,9 @@ public class TrangDauTienResource {
     final
     DanhGiaService danhGiaService;
 
-    public TrangDauTienResource(ChuyenXeService chuyenXeService, NhaXeService nhaXeService, ViTriService viTriService, ViTriChuyenXeService viTriChuyenXeService, OrderDetailService orderDetailService, DanhGiaService danhGiaService) {
+    public TrangDauTienResource(ChuyenXeService chuyenXeService, NhaXeService nhaXeService,
+                                ViTriService viTriService, ViTriChuyenXeService viTriChuyenXeService,
+                                OrderDetailService orderDetailService, DanhGiaService danhGiaService) {
         this.chuyenXeService = chuyenXeService;
         this.nhaXeService = nhaXeService;
         this.viTriService = viTriService;
@@ -59,6 +61,11 @@ public class TrangDauTienResource {
                     diemDung,
                     ngayXuatPhat);
             logger.info("size = " + chuyenXes.size());
+            if(chuyenXes.size() ==0 ){
+                code = 400;
+                message = "Không có chuyến xe nào phù hợp!";
+                return ResponseEntity.ok(new Response(code, message, searchResponses));
+            }
             for (ChuyenXe chuyenXe : chuyenXes) {
                 String tenNhaXe = nhaXeService.findById(chuyenXe.getIdNhaXe()).getTen();
                 List<ViTriChuyenXe> viTriChuyenXesDi = viTriChuyenXeService.findByIdChuyenXeAndType(chuyenXe.getId(), TYPE_DIEM_DI);

@@ -11,14 +11,21 @@
     <link rel="stylesheet" href="/custom/css/style-seatbooking.css">
     <link rel="stylesheet" href="/custom/css/normalize.css">
     <link rel="stylesheet" href="/custom/css/style-thanhtoan.css">
-    <!--    <link rel="stylesheet" href="/libs/jquery/jquery.dataTables.1.10.19.min.css">-->
     <script type="text/javascript" src="/libs/jquery/jquery-3.3.1.min.js"></script>
-    <!--    <script type="text/javascript" src="/libs/jquery/jquery.dataTables.1.10.19.min.js"></script>-->
     <script type="text/javascript" src="/libs/jquery-ui/jquery-ui.1.12.1.min.js"></script>
     <script type="text/javascript" src="/libs/bootstrap/bootstrap-datepicker.js"></script>
     <script src="/libs/bootstrap/bootstrap.4.1.0.min.js"></script>
     <script type="text/javascript" src="/custom/js/trangthanhtoan.js"></script>
     <style>
+        .seat {
+            display: block;
+        }
+
+        #table_book {
+            overflow-y: scroll;
+            max-height: 400px;
+        }
+
     </style>
 </head>
 
@@ -31,11 +38,10 @@
         </div>
         <div class="menu_header">
             <ul class="menu">
-                <li><a href="/trang-chu">Trang chủ</a></li>
+                <li><a href="" id="logout">Đăng Xuất</a></li>
+                <li><a href="/">Tìm Kiếm Chuyến Đi</a></li>
                 <li><a href="">Tin tức</a></li>
                 <li><a href="">Khuyến mãi</a></li>
-                <li><a href="">Đăng nhập</a></li>
-                <li><a href="">Đăng ký</a></li>
             </ul>
         </div>
     </div>
@@ -50,9 +56,11 @@
 
     <div class="main-content">
         <div class="left-content float_left">
-            <div>
-                <table class="table table-hover" id="table_book">
+            <div id="table_book">
+                <table class="table table-hover">
                     <tr>
+                        <th>STT</th>
+                        <th>Vị Trí Ghế</th>
                         <th>Giá Vé</th>
                     </tr>
                     <tbody id="tbody_thanh_toan">
@@ -125,10 +133,8 @@
     <!-- Modal -->
     <div id="notifi" class="modal fade" role="dialog">
         <div class="modal-dialog">
-
             <!-- Modal content-->
             <div class="modal-content">
-
                 <div class="modal-body">
                     <p>Bạn chắc chắn muốn thanh toán!</p>
                 </div>

@@ -8,25 +8,35 @@
     <link rel="stylesheet" href="libs/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="libs/assets/css/Registration-Form-with-Photo.css">
     <link rel="stylesheet" href="libs/assets/css/styles.css">
+    <script src="/libs/jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/libs/bootstrap/bootstrap.4.1.0.min.js"></script>
+    <script type="text/javascript" src="/custom/js/layouts/common_component.js"></script>
+    <script type="text/javascript" src="/custom/js/register.js"></script>
 </head>
 
 <body>
 <div class="register-photo">
     <div class="form-container">
-        <div class="image-holder"
-             style="background-image: url(&quot;assets/img/xe-khach-ha-son-hai-van.jpg&quot;);"></div>
-        <form method="post">
-            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
-            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Mật Khẩu">
+        <!--        <div class="image-holder"-->
+        <!--             style="background-image: url(&quot;assets/img/xe-khach-ha-son-hai-van.jpg&quot;);"></div>-->
+        <form id="form_register">
+            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"
+                                           id="email"></div>
+            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Mật Khẩu"
+                                           id="password">
             </div>
             <div class="form-group"><input class="form-control" type="password" name="password-repeat"
-                                           placeholder="Nhập Lại Mật Khẩu"></div>
+                                           placeholder="Nhập Lại Mật Khẩu" id="confirm_password"></div>
+            <div class="form-group"><input class="form-control" type="text" name="real-name"
+                                           placeholder="Họ và Tên" id="real_name"></div>
+            <div class="form-group"><input class="form-control" type="text" name="phone"
+                                           placeholder="Số điện thoại" id="phone"></div>
             <div class="form-group">
                 <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox">Tôi
                     đồng ý với điều khoản sử dụng.</label></div>
             </div>
             <div class="form-group">
-                <button class="btn btn-primary btn-block" type="submit" style="background-color: #265a88;">Đăng Ký
+                <button class="btn btn-primary btn-block" style="background-color: #265a88;" id="button_register">Đăng Ký
                 </button>
             </div>
             <a href="#" class="already" style="color: #265a88;">Đã có tài khoản? Đăng Nhập</a></form>

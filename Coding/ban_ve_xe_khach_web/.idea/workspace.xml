@@ -3,10 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="5fa2fce9-2377-4b0b-8097-fd7961f0e6c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/resource/TrangDauTienResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/api/resource/TrangDauTienResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/service/DanhGiaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/service/DanhGiaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cnwtt/ban_ve_xe_khach/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/custom/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/custom/js/trang_chu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/trang_chu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/custom/js/trangdautien.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/trangdautien.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/custom/js/trangthanhtoan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/trangthanhtoan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/a.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/trangThanhtoan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/trangThanhtoan.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/trangchu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/trangchu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,16 +54,30 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="dat_ve_xe_khach: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="dat_ve_xe_khach@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dat_ve_xe_khach: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="thanh_toan: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="dat_ve_xe_khach@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="dat_ve_xe_khach: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
+        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -95,7 +120,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -106,61 +131,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\CNWeb\ban_ve_xe_khach_web\src\main\resources\static\images" />
       <recent name="C:\Users\Kira\Documents\tien_tien_2\btl_cnwtt_nhom9_ban_ve_xe_khach\Coding\ban_ve_xe_khach_web\src\main\resources\templates" />
       <recent name="C:\Users\Kira\Documents\tien_tien_2\btl_cnwtt_nhom9_ban_ve_xe_khach\Coding\ban_ve_xe_khach_web\src\main\resources\static\libs" />
       <recent name="C:\Users\Kira\Documents\tien_tien_2\btl_cnwtt_nhom9_ban_ve_xe_khach\Coding\ban_ve_xe_khach_web\src\main\resources\static\images" />
       <recent name="C:\ban_ve_xe_khach_web\src\main\resources\static\libs" />
-      <recent name="C:\Demo\src\main\resources\static\libs" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Run" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cnwtt.ban_ve_xe_khach.RunApplication" />
@@ -213,6 +191,7 @@
       <workItem from="1576937672814" duration="226000" />
       <workItem from="1576937918726" duration="34631000" />
       <workItem from="1577065897294" duration="24589000" />
+      <workItem from="1577109361017" duration="9912000" />
     </task>
     <servers />
   </component>
@@ -245,10 +224,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="550" y="31" key="#Plugins/0.0.1366.728@0.0.1366.728" timestamp="1576938299471" />
-    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576919688767">
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577152807793">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1576919688767" />
+    <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1577152807793" />
     <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser" timestamp="1577056033535">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -266,46 +245,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="114" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1577097370916" />
-    <state width="1323" height="271" key="GridCell.Tab.0.bottom" timestamp="1577120931827">
+    <state width="1323" height="344" key="GridCell.Tab.0.bottom" timestamp="1577147291012">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="265" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1577098470471" />
-    <state width="1323" height="271" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577120931827" />
-    <state width="1323" height="271" key="GridCell.Tab.0.center" timestamp="1577120931827">
+    <state width="1323" height="344" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577147291012" />
+    <state width="1323" height="344" key="GridCell.Tab.0.center" timestamp="1577147291012">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="265" key="GridCell.Tab.0.center/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1577098470471" />
-    <state width="1323" height="271" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1577120931827" />
-    <state width="1323" height="271" key="GridCell.Tab.0.left" timestamp="1577120931827">
+    <state width="1323" height="344" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1577147291012" />
+    <state width="1323" height="344" key="GridCell.Tab.0.left" timestamp="1577147291012">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="265" key="GridCell.Tab.0.left/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1577098470471" />
-    <state width="1323" height="271" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1577120931827" />
-    <state width="1323" height="271" key="GridCell.Tab.0.right" timestamp="1577120931827">
+    <state width="1323" height="344" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1577147291012" />
+    <state width="1323" height="344" key="GridCell.Tab.0.right" timestamp="1577147291012">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="265" key="GridCell.Tab.0.right/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1577098470471" />
-    <state width="1323" height="271" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1577120931827" />
-    <state width="1323" height="271" key="GridCell.Tab.1.bottom" timestamp="1577120931828">
+    <state width="1323" height="344" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1577147291012" />
+    <state width="1323" height="344" key="GridCell.Tab.1.bottom" timestamp="1577147291013">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="265" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1577098470471" />
-    <state width="1323" height="271" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577120931828" />
-    <state width="1323" height="271" key="GridCell.Tab.1.center" timestamp="1577120931828">
+    <state width="1323" height="344" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577147291013" />
+    <state width="1323" height="344" key="GridCell.Tab.1.center" timestamp="1577147291013">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="265" key="GridCell.Tab.1.center/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1577098470471" />
-    <state width="1323" height="271" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1577120931828" />
-    <state width="1323" height="271" key="GridCell.Tab.1.left" timestamp="1577120931828">
+    <state width="1323" height="344" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1577147291013" />
+    <state width="1323" height="344" key="GridCell.Tab.1.left" timestamp="1577147291012">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="265" key="GridCell.Tab.1.left/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1577098470471" />
-    <state width="1323" height="271" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1577120931828" />
-    <state width="1323" height="271" key="GridCell.Tab.1.right" timestamp="1577120931828">
+    <state width="1323" height="344" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1577147291012" />
+    <state width="1323" height="344" key="GridCell.Tab.1.right" timestamp="1577147291013">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="265" key="GridCell.Tab.1.right/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1577098470471" />
-    <state width="1323" height="271" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1577120931828" />
+    <state width="1323" height="344" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1577147291013" />
     <state width="1323" height="222" key="GridCell.Tab.2.bottom" timestamp="1577108453549">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -331,11 +310,11 @@
     </state>
     <state x="562" y="247" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1577097355330" />
     <state x="562" y="247" width="319" height="233" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.728@0.0.1366.728" timestamp="1577000663835" />
-    <state x="484" y="197" width="397" height="329" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1577094627259">
+    <state x="484" y="197" width="397" height="329" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1577145944380">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="484" y="197" width="397" height="329" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1366.728/1366.-304.1920.1040@0.0.1366.728" timestamp="1577094627259" />
-    <state x="484" y="197" width="397" height="333" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1366.728@0.0.1366.728" timestamp="1577051977512" />
+    <state x="484" y="197" width="397" height="329" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1366.728@0.0.1366.728" timestamp="1577145944380" />
     <state x="735" y="28" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1577096661976">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
