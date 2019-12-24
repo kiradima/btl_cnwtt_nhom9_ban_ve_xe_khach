@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5fa2fce9-2377-4b0b-8097-fd7961f0e6c4" name="Default Changelist" comment="" />
+    <list default="true" id="5fa2fce9-2377-4b0b-8097-fd7961f0e6c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/custom/js/trang_chu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/trang_chu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/custom/js/trangthanhtoan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/custom/js/trangthanhtoan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/trangThanhtoan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/trangThanhtoan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/trangchu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/trangchu.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
