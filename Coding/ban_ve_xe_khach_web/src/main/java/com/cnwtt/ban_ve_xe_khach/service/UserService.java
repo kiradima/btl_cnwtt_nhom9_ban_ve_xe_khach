@@ -24,44 +24,17 @@ public class UserService {
         return repository.findAll();
     }
 
-    /**
-     * Create
-     *
-     * @param entity
-     * @return
-     */
     public User create(User entity) {
         return repository.save(entity);
     }
-
-    /**
-     * Read
-     *
-     * @param id
-     * @return
-     */
 
     public User findById(Long id) {
         return repository.findById(id).get();
     }
 
-    /**
-     * Update
-     *
-     * @param entity
-     * @return
-     */
-
     public User update(User entity) {
         return repository.save(entity);
     }
-
-    /**
-     * Delete
-     *
-     * @param id
-     * @return
-     */
 
     public void delete(Long id){
         User entity = findById(id);

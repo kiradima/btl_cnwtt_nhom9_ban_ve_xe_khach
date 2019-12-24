@@ -32,9 +32,9 @@ $(document).ready(function () {
             },
             error: function (error) {
                 console.log(error);
-                alert("Failed");
+                alert("Không có chuyến xe nào phù hợp!");
                 $("#tim_kiem").prop("disabled", false);
             }
         });
-    })
+    });
 });

@@ -21,7 +21,6 @@
     <script type="text/javascript" src="/custom/js/layouts/common_component.js"></script>
     <script type="text/javascript" src="/libs/jquery-ui/jquery-ui.1.12.1.min.js"></script>
     <script type="text/javascript" src="/custom/js/trang_chu.js"></script>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -30,9 +29,9 @@
 <div class="container">
     <div class="header">
         <div class="logo_header">
-            <a href="/trang-chu">
-                <img type="images" class="img-responsive" src="/images/logo.jpg" alt="" style="">
-            </a>
+<!--            <a href="/trang-chu">-->
+<!--                <img type="images" class="img-responsive" src="/images/logo.jpg" alt="" style="">-->
+<!--            </a>-->
         </div>
         <div class="menu_header">
             <ul class="menu">
@@ -41,13 +40,12 @@
                 <li><a href="">Tin tức</a></li>
                 <li><a href="">Khuyến mãi</a></li>
                 <li id="nav_login" hidden><a href="/login">Đăng nhập</a></li>
-                <li id="nav_register" hidden><a href="/register">Đăng ký</a></li>
+                <li id="nav_register" hidden><a href="/dang-ky">Đăng ký</a></li>
             </ul>
         </div>
     </div>
     <div class="header_input">
         <div class="header_input_form">
-<!--            <label for="start_location">Điểm xuất phát</label>-->
             <select name="" id="start_location" class="form-control" required="required">
                 <option value="" selected>Chọn điểm xuất phát</option>
                 <option th:each="tinh:${tinhs}" th:value="${tinh}" th:text="${tinh}"></option>
@@ -57,18 +55,16 @@
             <span style="font-size: 20px;" class="glyphicon glyphicon-arrow-right"></span>
         </div>
         <div class="header_input_form">
-<!--            <label for="end_location">Điểm kết thúc</label>-->
             <select name="" id="end_location" class="form-control" required="required">
                 <option value="" selected>Chọn điểm đến</option>
                 <option th:each="tinh:${tinhs}" th:value="${tinh}" th:text="${tinh}"></option>
             </select>
         </div>
         <div class="header_input_form">
-<!--            <label for="start_date">Ngày xuất phát</label>-->
             <input type="date" id="start_date" class="form-control datepicker" placeholder="Chọn ngày">
         </div>
         <div class="header_input_button">
-            <button class="btn button_input float_right" type="button">Tìm kiếm vé xe</button>
+            <button class="btn button_input float_right" type="button" id="tim_kiem">Tìm kiếm vé xe</button>
         </div>
     </div>
     <div class="filter_header">

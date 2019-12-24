@@ -58,6 +58,42 @@ $(document).ready(function () {
         window.location.reload();
     });
 });
+
+$(document).on("click", "#tim_kiem", function (e) {
+    var diemXuatPhat = $("#start_location").val();
+    var diemDung = $("#end_location").val();
+    var ngayXuatPhat = $("#start_date").val();
+    if (ngayXuatPhat === null || ngayXuatPhat === "" || ngayXuatPhat.trim() === "") {
+        alert("Mời nhập ngày xuất phát!");
+        return;
+    }
+    var searchRequest = {
+        diemXuatPhat: diemXuatPhat,
+        diemDung: diemDung,
+        ngayXuatPhat: ngayXuatPhat
+    };
+    sessionStorage.setItem("searchRequest", JSON.stringify(searchRequest));
+    $.ajax({
+        type: 'GET',
+        url: "/api/v1/trangdautien/search",
+        data: searchRequest,
+        success: function (response) {
+            console.log(response);
+            console.log(response.data.length);
+            if (response.data.length === 0) {
+                alert("Không có chuyến xe nào phù hợp!");
+            }
+            sessionStorage.setItem("dataSearch", JSON.stringify(response.data));
+            window.location.reload();
+        },
+        error: function (error) {
+            console.log(error);
+            alert("Không có chuyến xe nào phù hợp!");
+            $("#tim_kiem").prop("disabled", false);
+        }
+    });
+});
+
 $(document).on("click", "#confirm_login", function (e) {
     var email = $("#email").val();
     var password = $("#password").val();
@@ -129,7 +165,8 @@ $(document).on("click", "#chuyen_xes_collection", function (e) {
                         dataId: i - 1,
                         dataOrdered: response.data,
                         listGheChecked: listGheChecked,
-                        giaVe: dataSearch[i - 1].chuyenXe.mucGia
+                        giaVe: dataSearch[i - 1].chuyenXe.mucGia,
+                        soVe: listGheChecked.length
                     };
                     sessionStorage.setItem("bookTicketInfo", JSON.stringify(bookTicketInfo));
                     if (user != null) {
